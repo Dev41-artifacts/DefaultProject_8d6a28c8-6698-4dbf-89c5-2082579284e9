@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction CRM - User-Friendly Solutions for the Industry</title>
-    <meta name="description" content="A user-friendly CRM designed specifically for the construction industry, tailored for individuals with minimal tech experience.">
+    <title>ConstructCRM - Revolutionizing Construction Management</title>
+    <meta name="description" content="ConstructCRM is a user-friendly CRM tailored to meet the needs of the construction industry, featuring OCR capabilities, streamlined management tools, and an intuitive design for all users.">
     
     <!-- Advanced Font Integration -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
     <style>
-        /* CSS Reset & Optimization */
+        /* CSS RESET & OPTIMIZATION */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -25,244 +25,240 @@
         
         html {
             scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             font-size: 16px;
         }
         
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #3f3f46;
-            background-color: #ffffff;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
             overflow-x: hidden;
         }
-        
-        /* General Styles */
+
+        /* Advanced Color System */
         :root {
+            --primary-50: #ecfdf5;
+            --primary-100: #d1fae5;
+            --primary-200: #a7f3d0;
+            --primary-300: #6ee7b7;
+            --primary-400: #34d399;
             --primary-500: #10b981;
-            --primary-600: #059669;
-            --neutral-200: #e4e4e7;
             --neutral-900: #18181b;
+            --text-primary: var(--neutral-900);
             --bg-primary: #ffffff;
-            --bg-secondary: #f9fafb;
+            --container-max: 1200px;
         }
 
-        /* Layout and Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
+        /* Advanced Typography */
+        .text-display-1 { font-size: 3.75rem; font-weight: 800; }
+        .text-h1 { font-size: 2.25rem; font-weight: 700; }
+        .text-h2 { font-size: 1.875rem; font-weight: 600; }
+        .text-h3 { font-size: 1.5rem; font-weight: 600; }
 
-        .section {
-            padding: 4rem 0;
-            position: relative;
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('path/to/your/image.jpg') no-repeat center center/cover;
-        }
-
-        .text-h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .text-h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.375rem;
-            background-color: var(--primary-500);
-            color: white;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: var(--primary-600);
-        }
+        /* Advanced Layout */
+        .container { max-width: var(--container-max); margin: 0 auto; padding: 0 2rem; }
+        .section { padding: 4rem 0; }
 
         /* Advanced Navbar */
         .navbar {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            transition: background 0.3s;
-            z-index: 10;
+            top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--neutral-900);
+            transition: var(--transition-fast);
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: #3f3f46;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-500);
+        /* Advanced Buttons */
+        .btn {
+            padding: 1rem 2rem; border-radius: 0.375rem; font-weight: 600; text-decoration: none;
+            transition: all 0.3s;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-            .hero {
-                min-height: 80vh;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .text-h1 {
-                font-size: 2.5rem;
-            }
-        }
+        .btn-primary { background: var(--primary-500); color: white; }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Advanced Navigation with Glass Morphism -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
-            <a href="#" class="nav-logo">Construction CRM</a>
+            <a href="#" class="nav-logo">ConstructCRM</a>
             <ul class="nav-menu">
                 <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#usecases" class="nav-link">Use Cases</a></li>
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
             </ul>
             <div>
-                <a href="#" class="btn">Get Started</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section class="section section-hero" id="hero">
         <div class="container">
-            <h1 class="text-h1" id="typed-text"></h1>
-            <h2 class="text-h2">Building Better Solutions for the Construction Industry</h2>
-            <a href="#features" class="btn">Learn More</a>
+            <h1 class="text-display-1" id="typed-text"></h1>
+            <p class="text-h2">Revolutionize your construction project management with our user-friendly software.</p>
+            <a href="#features" class="btn btn-primary">Learn More</a>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="section" id="features">
         <div class="container">
-            <h2 class="text-h2">Key Features</h2>
-            <div class="grid grid-cols-3">
+            <h2 class="text-h1">Features</h2>
+            <div class="grid grid-cols-3 gap-6">
                 <div class="card">
-                    <h3>User-Friendly Design</h3>
-                    <p>Designed for individuals unfamiliar with complex tools and aimed at novice tech users.</p>
+                    <h3 class="text-h3">User-Friendly Design</h3>
+                    <p>This CRM is tailored for novice users, providing a straightforward user experience.</p>
                 </div>
                 <div class="card">
-                    <h3>OCR Functionality</h3>
-                    <p>Incorporated Optical Character Recognition (OCR) functionality to easily identify contacts and deals.</p>
+                    <h3 class="text-h3">OCR Functionality</h3>
+                    <p>Use optical character recognition to easily capture contact information and deals.</p>
                 </div>
                 <div class="card">
-                    <h3>Industry-Specific Features</h3>
-                    <p>Tailored functionalities catering specifically to the construction industry needs.</p>
+                    <h3 class="text-h3">Tailored for Your Industry</h3>
+                    <p>Features specifically designed to meet the unique needs of the construction sector.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases Section -->
-    <section class="section" id="usecases">
+    <!-- Stats Section -->
+    <section class="section" id="stats">
         <div class="container">
-            <h2 class="text-h2">Use Cases</h2>
-            <p>Our CRM provides functionalities that will address significant problems faced by the construction industry, ensuring streamlined project management.</p>
+            <h2 class="text-h1">Key Metrics</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="counter" data-target="200">0</div>
+                <div class="counter" data-target="50">0</div>
+                <div class="counter" data-target="99.9">0</div>
+            </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials">
+    <!-- Customer Success Section -->
+    <section class="section" id="success">
         <div class="container">
-            <h2 class="text-h2">What Our Users Say</h2>
-            <div class="swiper testimonials-swiper">
+            <h2 class="text-h1">Customer Success Stories</h2>
+            <div class="swiper customer-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">"This CRM has transformed our project management!" - Construction Company A</div>
-                    <div class="swiper-slide">"Very intuitive and easy to use for our team." - Construction Company B</div>
+                    <div class="swiper-slide">Case Study 1: Achieving 50% faster project completion.</div>
+                    <div class="swiper-slide">Case Study 2: Improved subcontractor coordination.</div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
         <div class="container">
-            <h2 class="text-h2">Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button class="btn" type="submit">Send Message</button>
-            </form>
+            <h2 class="text-h1">What Our Customers Say</h2>
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">"ConstructCRM transformed our project management!" - John Doe, Builder</div>
+                    <div class="swiper-slide">"User-friendly and effective tool for our team." - Jane Smith, Project Manager</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="text-h1">Pricing Plans</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <div class="card">
+                    <h3 class="text-h3">Basic Plan</h3>
+                    <p>Perfect for small teams.</p>
+                    <p>$29/month</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-h3">Standard Plan</h3>
+                    <p>Best for medium-sized businesses.</p>
+                    <p>$59/month</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-h3">Advanced Plan</h3>
+                    <p>For large enterprises.</p>
+                    <p>$99/month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="text-h1">About Us</h2>
+            <p>We are committed to transforming the way construction firms operate through innovative technology. Our team consists of industry experts dedicated to enhancing productivity, ensuring compliance, and facilitating communication between team members.</p>
         </div>
     </section>
 
     <!-- External JavaScript Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/lib/typed.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS
-            AOS.init({
-                duration: 1000,
-                once: true,
-                offset: 100
-            });
-            
-            // Initialize Typed.js
-            new Typed('#typed-text', {
-                strings: ['Building Construction Efficiency', 'Simplifying Project Management', 'Connecting Teams Seamlessly'],
-                typeSpeed: 120,
-                backSpeed: 50,
-                loop: true
-            });
+        // Initialize AOS
+        AOS.init();
 
-            // Initialize Swiper
-            new Swiper('.testimonials-swiper', {
-                slidesPerView: 1,
-                autoplay: { delay: 5000 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
+        // Typed.js initialization
+        new Typed('#typed-text', {
+            strings: ['Transform Project Management', 'Increase Team Productivity', 'Simplify Construction Coordination'],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true
+        });
+
+        // Swiper initialization for testimonials
+        const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateCounter(entry.target, target);
+                    observer.unobserve(entry.target);
                 }
             });
         });
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 200;
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+            updateCounter();
+        }
     </script>
 </body>
 </html>
