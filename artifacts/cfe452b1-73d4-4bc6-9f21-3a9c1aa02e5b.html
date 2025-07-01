@@ -1,24 +1,52 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction CRM - Streamline Your Projects</title>
-    <meta name="description" content="Discover the ultimate CRM designed for the construction industry. Tailored for ease of use, with unique features to enhance your workflow and visibility.">
+    <title>Construction CRM - Simplifying Project Management</title>
+    <meta name="description" content="Discover our innovative CRM designed specifically for the construction industry. User-friendly, powerful, and tailored for tech-savvy and novice users alike.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* CSS RESET AND BASE STYLES */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* DESIGN SYSTEM VARIABLES */
         :root {
-            --primary-600: #28a745;
-            --primary-700: #218838;
+            /* Typography */
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --text-xs: 12px;
+            --text-sm: 14px;
+            --text-base: 16px;
+            --text-lg: 18px;
+            --text-xl: 20px;
+            --text-2xl: 24px;
+            --text-3xl: 30px;
+            --text-4xl: 36px;
+            --text-5xl: 48px;
+            --text-6xl: 60px;
+            --text-7xl: 72px;
+            
+            /* Colors */
+            --primary-500: #3b82f6;
+            --primary-600: #2563eb;
+            --primary-700: #1d4ed8;
             --gray-50: #f9fafb;
             --gray-100: #f3f4f6;
-            --gray-600: #4b5563;
+            --gray-200: #e5e7eb;
+            --gray-500: #6b7280;
             --gray-800: #1f2937;
             --gray-900: #111827;
+            --green-500: #10b981;
             --white: #ffffff;
-            --black: #000000;
+            
+            /* Spacing */
             --space-xs: 8px;
             --space-sm: 16px;
             --space-md: 24px;
@@ -28,150 +56,353 @@
             --space-3xl: 80px;
             --space-4xl: 120px;
             --space-5xl: 200px;
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --text-base: 16px;
-            --text-lg: 18px;
-            --text-xl: 20px;
-            --text-2xl: 24px;
-            --text-3xl: 30px;
-            --text-4xl: 36px;
-            --text-5xl: 48px;
+            
+            /* Layout */
+            --container-max: 1200px;
+            --border-radius: 12px;
+            --border-radius-lg: 16px;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        /* BASE STYLES */
         body {
             font-family: var(--font-family);
             line-height: 1.6;
             color: var(--gray-800);
             font-size: var(--text-base);
-            background: var(--gray-50);
+            background-color: var(--white);
         }
-        .container {
-            max-width: 1200px;
+        
+        /* HEADER STYLES */
+        .navbar {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: var(--space-md) 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: var(--container-max);
             margin: 0 auto;
             padding: 0 var(--space-xl);
         }
-        .section { padding: var(--space-4xl) 0; }
-        .hero-section { background: url('https://images.unsplash.com/photo-1519389950473-47f29e18b244?w=1920&h=1080&fit=crop') center/cover; padding: var(--space-5xl) 0; color: var(--white);}
-        h1 { font-size: var(--text-5xl); font-weight: 700; line-height: 1.1; }
-        h2 { font-size: var(--text-4xl); font-weight: 600; line-height: 1.2; }
-        h3 { font-size: var(--text-3xl); font-weight: 600; line-height: 1.3; }
-        .btn {
-            display: inline-flex;
+        
+        .nav-logo {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--gray-900);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
             align-items: center;
-            padding: var(--space-sm) var(--space-lg);
+            gap: var(--space-2xl);
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: var(--gray-500);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--gray-900);
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            height: 600px;
+            background: url('https://images.unsplash.com/photo-1591587342428-2646abbbf2a1?w=1920&h=600&fit=crop') center center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 var(--space-xl);
+        }
+
+        .hero-title {
+            font-size: var(--text-6xl);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-subtitle {
+            font-size: var(--text-xl);
+            color: var(--white);
+            max-width: 800px;
+            margin-bottom: var(--space-lg);
+        }
+
+        .hero-btn {
+            padding: var(--space-md) var(--space-2xl);
             background: var(--primary-600);
             color: var(--white);
-            text-decoration: none;
-            border-radius: 8px;
+            border: none;
+            border-radius: var(--border-radius);
             font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .hero-btn:hover {
+            background: var(--primary-700);
+        }
+
+        /* CUSTOMER TRUST BAR */
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-md) 0;
+        }
+
+        .trust-logo {
+            max-height: 50px;
+            margin: 0 var(--space-lg);
+        }
+
+        /* VALUE PROPOSITION SECTION */
+        .value-proposition {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: var(--space-4xl) 0;
+            text-align: center;
+        }
+
+        .value-proposition-title {
+            font-size: var(--text-5xl);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+
+        .value-proposition-description {
+            margin-bottom: var(--space-xl);
             font-size: var(--text-lg);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            color: var(--gray-500);
+        }
+
+        /* FEATURES GRID */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            padding: var(--space-4xl) 0;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
             transition: all 0.3s ease;
         }
-        .btn:hover {
-            background: var(--primary-700);
-            transform: translateY(-2px);
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
-        .grid {
-            display: grid;
-            gap: var(--space-xl);
+
+        .feature-title {
+            font-size: var(--text-xl);
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
         }
-        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-        .card {
+
+        .feature-description {
+            color: var(--gray-500);
+        }
+
+        /* USE CASES SECTION */
+        .use-cases {
+            padding: var(--space-4xl) 0;
+            text-align: center;
+        }
+
+        .use-case-item {
+            padding: var(--space-md);
+        }
+
+        .use-case-icon {
+            font-size: 60px; /* Placeholder for icons */
+            color: var(--green-500);
+            margin-bottom: var(--space-md);
+        }
+
+        /* TESTIMONIALS SECTION */
+        .testimonials {
+            text-align: center;
+            padding: var(--space-4xl) 0;
+        }
+
+        .testimonial {
             background: var(--white);
-            padding: var(--space-xl);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin: 0 auto;
+            max-width: 600px;
         }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+
+        .testimonial-text {
+            font-size: var(--text-lg);
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--gray-700);
         }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: var(--primary-500);
+            color: var(--white);
+            text-align: center;
+            padding: var(--space-4xl) 0;
+        }
+
+        .cta-title {
+            font-size: var(--text-4xl);
+            margin-bottom: var(--space-md);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--gray-100);
+            padding: var(--space-4xl) 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            color: var(--gray-600);
+        }
+
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
-            .grid-cols-3 { grid-template-columns: 1fr; }
-            .hero-section { padding: var(--space-4xl) 0; }
-            h1 { font-size: var(--text-4xl); }
-            h2 { font-size: var(--text-3xl); }
-            .section { padding: var(--space-3xl) 0; }
+            :root {
+                --text-6xl: 48px;
+                --text-5xl: 36px;
+                --text-4xl: 28px;
+                --space-4xl: 80px;
+                --space-5xl: 120px;
+            }
+            
+            .container {
+                padding: 0 var(--space-md);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="hero-section text-center">
-        <div class="container">
-            <h1>Revolutionize Your Construction Projects</h1>
-            <h2>Your All-in-One CRM Solution</h2>
-            <a href="#contact" class="btn">Get Started Today</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Construction CRM</a>
+            <ul class="nav-menu">
+                <li><a href="#value-proposition" class="nav-link">Value Proposition</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#use-cases" class="nav-link">Use Cases</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <header class="hero-section">
+        <h1 class="hero-title">Transform Your Construction Projects</h1>
+        <p class="hero-subtitle">A user-friendly CRM solution tailored for the construction industry. Simplify your project management and enhance collaboration.</p>
+        <a href="#contact" class="hero-btn">Get Started Today</a>
     </header>
-    
-    <section class="section">
-        <div class="container">
-            <h2>Why Choose Our CRM?</h2>
-            <div class="grid grid-cols-3">
-                <div class="card">
-                    <h3>User-Friendly Design</h3>
-                    <p>Designed for those who are new to technology, our CRM is easy to navigate, making project management stress-free.</p>
-                </div>
-                <div class="card">
-                    <h3>Powerful OCR Functionality</h3>
-                    <p>Easily click pictures to identify contacts and deals, streamlining your workflow and increasing efficiency.</p>
-                </div>
-                <div class="card">
-                    <h3>Industry-Specific Features</h3>
-                    <p>Tailored functionalities that cater specifically to the construction industry, ensuring you have the tools you need.</p>
-                </div>
-            </div>
-        </div>
+
+    <div class="trust-bar">
+        <img src="https://via.placeholder.com/150x100.png?text=Company+Logo" alt="Trust Logo" class="trust-logo">
+        <img src="https://via.placeholder.com/150x100.png?text=Company+Logo" alt="Trust Logo" class="trust-logo">
+        <img src="https://via.placeholder.com/150x100.png?text=Company+Logo" alt="Trust Logo" class="trust-logo">
+        <img src="https://via.placeholder.com/150x100.png?text=Company+Logo" alt="Trust Logo" class="trust-logo">
+        <img src="https://via.placeholder.com/150x100.png?text=Company+Logo" alt="Trust Logo" class="trust-logo">
+        <img src="https://via.placeholder.com/150x100.png?text=Company+Logo" alt="Trust Logo" class="trust-logo">
+    </div>
+
+    <section class="value-proposition" id="value-proposition">
+        <h2 class="value-proposition-title">Why Choose Us?</h2>
+        <p class="value-proposition-description">Our CRM is designed to be intuitive and straightforward, perfect for construction professionals who may not be familiar with complex technologies.</p>
     </section>
-    
-    <section class="section">
-        <div class="container">
-            <h2>How It Works</h2>
-            <h3>Effective Steps to Manage Your Projects</h3>
-            <ol>
-                <li>Sign Up and Customize Your Dashboard.</li>
-                <li>Utilize OCR to Manage Contacts Effortlessly.</li>
-                <li>Track Your Projects in Real-Time.</li>
-                <li>Communicate with Your Team Seamlessly.</li>
-            </ol>
+
+    <section class="features-grid" id="features">
+        <div class="feature-card">
+            <h3 class="feature-title">User-Friendly Design</h3>
+            <p class="feature-description">Crafted for individuals who are learning technology for the first time, ensuring ease of navigation and use.</p>
         </div>
-    </section>
-    
-    <section class="section">
-        <div class="container">
-            <h2>Customer Testimonials</h2>
-            <div class="grid grid-cols-3">
-                <div class="card">
-                    <p>"This CRM transformed how we manage our projects. It's easy to use and fits perfectly in our daily workflow." - John D., Project Manager</p>
-                </div>
-                <div class="card">
-                    <p>"I love the OCR feature! It has saved me so much time. I can now focus on what really matters." - Sarah L., Construction Superintendent</p>
-                </div>
-                <div class="card">
-                    <p>"Finally, a tool that's designed specifically for our industry. Highly recommend!" - Mike R., Business Owner</p>
-                </div>
-            </div>
+        <div class="feature-card">
+            <h3 class="feature-title">Optical Character Recognition (OCR)</h3>
+            <p class="feature-description">Easily scan documents and identify contacts or deals with our built-in OCR functionality.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">Industry-Specific Functionalities</h3>
+            <p class="feature-description">Tailored tools and functionalities that address the specific challenges faced in the construction industry.</p>
+        </div>
+        <div class="feature-card">
+            <h3 class="feature-title">Visibility Enhancement</h3>
+            <p class="feature-description">Incorporate word-of-mouth and conference outreach to improve visibility and user acquisition.</p>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container">
-            <h2>Security and Compliance</h2>
-            <p>Your data is secure with us. We comply with industry standards to ensure your information remains protected.</p>
+    <section class="use-cases" id="use-cases">
+        <h2>Use Cases</h2>
+        <div class="use-case-item">
+            <div class="use-case-icon">🏗️</div>
+            <h3>Project Management</h3>
+            <p>Efficiently manage construction projects with tailored features for tracking progress and communicating with stakeholders.</p>
+        </div>
+        <div class="use-case-item">
+            <div class="use-case-icon">👷‍♂️</div>
+            <h3>Team Collaboration</h3>
+            <p>Enhance collaboration between different teams by simplifying communication and integrating project updates in real time.</p>
         </div>
     </section>
 
-    <footer class="section">
-        <div class="container text-center">
-            <h2>Ready to Get Started?</h2>
-            <a href="#contact" class="btn">Contact Us</a>
-            <div>
-                <p>© 2025 Construction CRM. All rights reserved.</p>
-                <p>Privacy Policy | Terms of Service</p>
-            </div>
+    <section class="testimonials" id="testimonials">
+        <h2>User Feedback</h2>
+        <div class="testimonial">
+            <p class="testimonial-text">"This CRM has revolutionized our project management; it’s incredibly user-friendly and has all the features we need!"</p>
+            <div class="testimonial-author">– John D., Site Manager</div>
         </div>
+        <div class="testimonial">
+            <p class="testimonial-text">"As someone not very tech-savvy, I found this system simple to navigate, which has greatly improved my workflow!"</p>
+            <div class="testimonial-author">– Sarah L., Project Coordinator</div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h3 class="cta-title">Ready to Elevate Your Construction Business?</h3>
+        <a href="#contact" class="hero-btn">Contact Us for a Demo</a>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-text">&copy; 2025 Construction CRM. All Rights Reserved.</p>
+        <p class="footer-text">Contact Us: info@constructioncrm.com | +1 (800) 123-4567</p>
     </footer>
+
 </body>
 </html>
+```
