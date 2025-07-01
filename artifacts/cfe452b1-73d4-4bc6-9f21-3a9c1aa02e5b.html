@@ -5,15 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revolutionize Your Construction Management with Our CRM | BuildSmart</title>
-    <meta name="description" content="A user-friendly CRM designed for the construction industry, featuring intuitive tools and OCR functionality to streamline operations and enhance productivity.">
-    <meta name="keywords" content="Construction CRM, Project Management, Construction Management Software">
-    <meta property="og:title" content="Transform Your Construction Management with Our Innovative CRM">
-    <meta property="og:description" content="Discover a friendly and straightforward CRM tailored for the construction industry that simplifies project management.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1586226101810-c5e1497a0e01">
+    <title>Construction CRM - Simplifying Project Management for the Construction Industry</title>
+    <meta name="description" content="Discover the new Construction CRM designed for the construction industry, featuring user-friendly design, OCR functionality, and tailored tools for efficient project management.">
+    <meta name="keywords" content="Construction CRM, Project Management, OCR Functionality, User-Friendly Design, Construction Software">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* CSS RESET & NORMALIZATION */
         *, *::before, *::after {
@@ -38,38 +34,34 @@
 
         /* DESIGN SYSTEM VARIABLES */
         :root {
-            /* Color Palette */
-            --primary-50: #eff6ff;
-            --primary-100: #dbeafe;
+            /* Primary Brand Colors */
             --primary-500: #3b82f6;
-            --primary-600: #2563eb;
-            --primary-700: #1d4ed8;
             --neutral-50: #f9fafb;
+            --neutral-100: #f3f4f6;
             --neutral-800: #1f2937;
-            --neutral-900: #111827;
 
             /* Typography */
             --h1-size: clamp(48px, 5vw, 72px);
+            --h1-weight: 700;
             --h2-size: clamp(36px, 4vw, 56px);
             --body-regular: clamp(14px, 1.2vw, 18px);
-            
-            /* Spacing */
+
+            /* Section Spacing */
             --section-padding-desktop: 120px 0;
             --container-max: 1200px;
             --container-padding: 40px;
+
+            /* Shadow System */
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
 
         /* NAVIGATION STYLES */
-        nav {
-            height: 80px;
-            background: white;
-            box-shadow: var(--shadow-sm);
+        .navbar {
             position: sticky;
             top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
+            background-color: white;
+            box-shadow: var(--shadow-lg);
+            height: 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -77,40 +69,24 @@
         }
 
         .navbar a {
-            margin: 0 20px;
-            text-decoration: none;
             color: var(--neutral-800);
-            transition: color 0.2s;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 15px;
         }
 
-        .navbar a:hover {
-            color: var(--primary-600);
-        }
-
-        .cta-button {
-            background: var(--primary-600);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .cta-button:hover {
-            background: var(--primary-500);
-        }
-
-        /* HERO SECTION */
+        /* HERO SECTION STYLES */
         .hero-section {
             height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop&crop=center');
+            background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center');
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: white;
+            text-align: center;
+            padding: 20px;
         }
 
         .hero-section h1 {
@@ -120,30 +96,22 @@
 
         .hero-section p {
             font-size: var(--body-regular);
+            margin-bottom: 30px;
         }
 
-        /* CUSTOMER TRUST BAR */
-        .trust-bar {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 120px;
-            background-color: var(--neutral-100);
-            padding: 20px 0;
+        .cta-button {
+            background-color: var(--primary-500);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
         }
 
-        .trust-bar img {
-            height: 50px;
-            transition: transform 0.2s;
-        }
-
-        .trust-bar img:hover {
-            transform: scale(1.1);
-        }
-
-        /* VALUE PROPOSITION SECTION */
+        /* VALUE PROPOSITION STYLES */
         .value-proposition {
             padding: var(--section-padding-desktop);
+            background-color: var(--neutral-100);
             text-align: center;
         }
 
@@ -153,80 +121,46 @@
         }
 
         .value-proposition p {
-            font-size: var(--body-large);
-            margin: 0 auto;
             max-width: 800px;
-            line-height: 1.5;
+            margin: 0 auto;
         }
 
-        /* FEATURES GRID */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 40px;
+        /* FEATURES SECTION STYLES */
+        .features-section {
             padding: var(--section-padding-desktop);
         }
 
         .feature-card {
-            border: 1px solid var(--neutral-200);
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
             background: white;
-            box-shadow: var(--shadow-sm);
-            transition: transform 0.2s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            margin: 20px;
+            text-align: center;
         }
 
         .feature-card h3 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        /* TESTIMONIALS SECTION */
-        .testimonials {
+        /* TESTIMONIAL SECTION STYLES */
+        .testimonials-section {
             padding: var(--section-padding-desktop);
-            background: var(--neutral-100);
+            background-color: var(--neutral-50);
+        }
+
+        .testimonial {
+            margin: 20px auto;
+            max-width: 600px;
             text-align: center;
         }
 
-        .testimonial-item {
-            margin: 20px 0;
-        }
-
-        .testimonial-item p {
-            font-style: italic;
-        }
-
-        /* FAQ SECTION */
-        .faq {
-            padding: var(--section-padding-desktop);
+        /* FOOTER STYLES */
+        .footer {
+            padding: 40px;
+            background-color: var(--neutral-100);
             text-align: center;
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-        }
-
-        /* FOOTER */
-        footer {
-            padding: 40px 20px;
-            background: var(--neutral-900);
-            color: white;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        /* MEDIA QUERIES */
-        @media (max-width: 768px) {
-            .hero-section {
-                height: 450px;
-            }
+            font-size: var(--body-regular);
         }
     </style>
 </head>
@@ -234,88 +168,59 @@
 <body>
     <!-- PROFESSIONAL NAVIGATION -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="logo">BuildSmart</div>
+        <div class="logo">Construction CRM</div>
         <div>
             <a href="#features">Features</a>
             <a href="#testimonials">Testimonials</a>
-            <a href="#faq">FAQ</a>
-            <button class="cta-button">Get Started</button>
+            <a href="#contact">Contact Us</a>
+            <a href="#pricing" class="cta-button">Get Started</a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
     <section class="hero-section" role="banner">
-        <h1>Streamline Your Construction Management</h1>
-        <p>Discover a user-friendly CRM tailored specifically for the construction industry, enhancing productivity and efficiency.</p>
-        <button class="cta-button">Try It Free</button>
+        <h1>Transforming Construction Project Management</h1>
+        <p>Your all-in-one CRM solution for streamlined communication, project tracking, and efficiency.</p>
+        <a href="#contact" class="cta-button">Schedule a Demo</a>
     </section>
 
-    <!-- CUSTOMER TRUST BAR -->
-    <div class="trust-bar">
-        <img src="https://via.placeholder.com/150?text=Company+1" alt="Company 1 Logo">
-        <img src="https://via.placeholder.com/150?text=Company+2" alt="Company 2 Logo">
-        <img src="https://via.placeholder.com/150?text=Company+3" alt="Company 3 Logo">
-        <img src="https://via.placeholder.com/150?text=Company+4" alt="Company 4 Logo">
-        <img src="https://via.placeholder.com/150?text=Company+5" alt="Company 5 Logo">
-    </div>
-
-    <!-- VALUE PROPOSITION SECTION -->
-    <section class="value-proposition">
-        <h2>Your Construction Management, Simplified</h2>
-        <p>Our CRM empowers construction professionals with a straightforward, friendly design, featuring innovative tools like Optical Character Recognition (OCR) to easily identify contacts and deals through images. Tailored specifically for industry needs, BuildSmart ensures efficiency and ease of use for everyone, regardless of tech savviness.</p>
+    <!-- VALUE PROPOSITION -->
+    <section class="value-proposition" role="complementary">
+        <h2>Why Choose Our CRM?</h2>
+        <p>Designed specifically for the construction industry, our CRM offers a user-friendly interface and industry-tailored functionalities that simplify project management and improve communication among teams.</p>
     </section>
 
-    <!-- FEATURES GRID -->
-    <section class="features-grid" id="features">
+    <!-- FEATURES SECTION -->
+    <section class="features-section" role="region">
+        <h2>Key Features</h2>
+        <div class="feature-card">
+            <h3>OCR Functionality</h3>
+            <p>Easily capture contacts and deals with our Optical Character Recognition feature that lets you click pictures and extract information efficiently.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Industry-Specific Tools</h3>
+            <p>Our CRM is tailored specifically for the construction industry, ensuring all tools and features enhance your project management experience.</p>
+        </div>
         <div class="feature-card">
             <h3>User-Friendly Design</h3>
-            <p>Designed for novice users, our CRM simplifies tech adoption with intuitive tools and a friendly interface.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Optical Character Recognition</h3>
-            <p>Easily capture and identify contacts and deals through pictures, streamlining your workflow.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Tailored for Construction</h3>
-            <p>Built with the specific functionalities needed by construction professionals for seamless project management.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Enhanced Visibility</h3>
-            <p>Leverage multiple channels, including word-of-mouth and conferences, to discover and connect with users.</p>
+            <p>With a clean interface designed for novice tech users, anyone can navigate and operate our CRM without a steep learning curve.</p>
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials" id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-item">
-            <p>"BuildSmart has transformed how we manage our projects. The OCR feature is particularly useful!"</p>
-            <h4>- Alex Johnson, Project Manager</h4>
+    <!-- TESTIMONIAL SECTION -->
+    <section class="testimonials-section" role="contentinfo">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>"The Construction CRM has been a game-changer for our projects. The OCR functionality saved us hours of work!" - Jamie P., Project Manager</p>
         </div>
-        <div class="testimonial-item">
-            <p>"As someone who isn't tech-savvy, I found BuildSmart easy to navigate. It made my job so much easier!"</p>
-            <h4>- Maria Smith, Site Supervisor</h4>
+        <div class="testimonial">
+            <p>"We finally have a tool that everyone in our team can use without complex training!" - Alex K., Site Supervisor</p>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section class="faq" id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h4>How does the OCR feature work?</h4>
-            <p>Our OCR feature allows you to take pictures of documents or business cards and automatically extracts relevant information, such as names and contact details, directly into the CRM.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Can I integrate BuildSmart with other tools?</h4>
-            <p>Yes, BuildSmart can integrate with various project management tools and communication platforms, making your workflow seamless.</p>
-        </div>
-    </section>
-
-    <!-- PROFESSIONAL FOOTER -->
-    <footer>
-        <p>BuildSmart © 2025. All rights reserved.</p>
-        <p>Contact Us: info@buildsmart.com | Call Us: (123) 456-7890</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <!-- FOOTER SECTION -->
+    <footer class="footer" role="contentinfo">
+        <p>© 2025 Construction CRM. All rights reserved. | <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
     </footer>
 </body>
 
