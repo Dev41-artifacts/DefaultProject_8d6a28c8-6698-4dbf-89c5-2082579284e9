@@ -5,8 +5,8 @@ I'll create a professional landing page for a construction industry CRM with a f
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildCRM - Smart Construction Management Solution</title>
-    <meta name="description" content="BuildCRM - The intelligent CRM designed specifically for construction professionals. Featuring smart OCR technology and user-friendly interface.">
+    <title>BuildCRM - Smart Construction Management Platform</title>
+    <meta name="description" content="The intelligent CRM built specifically for construction professionals. Featuring smart OCR technology and user-friendly design to streamline your project management.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@ I'll create a professional landing page for a construction industry CRM with a f
             --color-gray-900: #111827;
 
             /* Typography */
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-family: 'Inter', -apple-system, system-ui, sans-serif;
             
             /* Spacing */
             --spacing-xs: 0.5rem;
@@ -78,7 +78,7 @@ I'll create a professional landing page for a construction industry CRM with a f
             z-index: 1000;
         }
 
-        .nav-content {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -91,9 +91,9 @@ I'll create a professional landing page for a construction industry CRM with a f
             text-decoration: none;
         }
 
-        .nav-links {
+        .nav-menu {
             display: flex;
-            gap: var(--spacing-md);
+            gap: 2rem;
         }
 
         .nav-link {
@@ -133,7 +133,7 @@ I'll create a professional landing page for a construction industry CRM with a f
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             text-align: center;
         }
@@ -183,17 +183,12 @@ I'll create a professional landing page for a construction industry CRM with a f
             padding: var(--spacing-2xl) 0;
         }
 
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-xl);
-        }
-
         .testimonial-card {
-            background: var(--color-gray-50);
+            background: var(--color-white);
             padding: var(--spacing-lg);
             border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: var(--spacing-lg);
         }
 
         .testimonial-text {
@@ -217,13 +212,7 @@ I'll create a professional landing page for a construction industry CRM with a f
         .cta-title {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .cta-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: var(--spacing-xl);
-            opacity: 0.9;
+            margin-bottom: var(--spacing-lg);
         }
 
         .btn-white {
@@ -254,15 +243,11 @@ I'll create a professional landing page for a construction industry CRM with a f
             margin-bottom: var(--spacing-md);
         }
 
-        .footer-links {
-            list-style: none;
-        }
-
         .footer-link {
             color: var(--color-gray-400);
             text-decoration: none;
-            margin-bottom: var(--spacing-xs);
             display: block;
+            margin-bottom: var(--spacing-xs);
         }
 
         .footer-link:hover {
@@ -271,21 +256,25 @@ I'll create a professional landing page for a construction industry CRM with a f
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
             .hero-title {
                 font-size: 2.5rem;
             }
 
-            .nav-links {
-                display: none;
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <nav class="nav">
-        <div class="container nav-content">
+        <div class="container nav-container">
             <a href="#" class="nav-logo">BuildCRM</a>
-            <div class="nav-links">
+            <div class="nav-menu">
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#testimonials" class="nav-link">Testimonials</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
@@ -296,28 +285,30 @@ I'll create a professional landing page for a construction industry CRM with a f
     </nav>
 
     <section class="hero">
-        <div class="container hero-content">
-            <h1 class="hero-title">Simplify Your Construction Management</h1>
-            <p class="hero-subtitle">The intelligent CRM designed specifically for construction professionals, featuring smart OCR technology and a user-friendly interface.</p>
-            <a href="#" class="btn btn-white">Start Free Trial</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Simplify Your Construction Management</h1>
+                <p class="hero-subtitle">The intelligent CRM that understands construction. Built for professionals, easy for everyone.</p>
+                <a href="#" class="btn btn-white">Start Free Trial</a>
+            </div>
         </div>
     </section>
 
     <section class="features" id="features">
         <div class="container">
-            <h2>Smart Features for Modern Construction</h2>
+            <h2 class="section-title">Smart Features for Modern Construction</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3 class="feature-title">Smart OCR Technology</h3>
-                    <p>Capture and digitize contact information and deals instantly with our advanced OCR technology.</p>
+                    <h3 class="feature-title">Smart Document Scanning</h3>
+                    <p>Instantly capture and process business cards, contracts, and project documents with our advanced OCR technology.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 class="feature-title">User-Friendly Interface</h3>
-                    <p>Designed for simplicity, our interface makes managing projects and contacts effortless.</p>
+                    <h3 class="feature-title">Project Timeline Tracking</h3>
+                    <p>Keep all your projects on schedule with intuitive timeline management and automated notifications.</p>
                 </div>
                 <div class="feature-card">
-                    <h3 class="feature-title">Construction-Specific Tools</h3>
-                    <p>Tailored features designed specifically for the unique needs of the construction industry.</p>
+                    <h3 class="feature-title">Client Management</h3>
+                    <p>Manage client relationships effortlessly with our user-friendly interface designed specifically for construction professionals.</p>
                 </div>
             </div>
         </div>
@@ -325,49 +316,40 @@ I'll create a professional landing page for a construction industry CRM with a f
 
     <section class="testimonials" id="testimonials">
         <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"BuildCRM has transformed how we manage our construction projects. The OCR feature saves us hours of manual data entry."</p>
-                    <p class="testimonial-author">John Smith, Project Manager</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Finally, a CRM that understands construction. The user-friendly interface made adoption across our team seamless."</p>
-                    <p class="testimonial-author">Sarah Johnson, Construction Director</p>
-                </div>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"BuildCRM has transformed how we manage our construction projects. The OCR feature saves us hours of manual data entry."</p>
+                <p class="testimonial-author">- John Smith, Project Manager</p>
             </div>
         </div>
     </section>
 
     <section class="cta">
         <div class="container">
-            <h2 class="cta-title">Ready to Transform Your Construction Management?</h2>
-            <p class="cta-subtitle">Join thousands of construction professionals who trust BuildCRM</p>
-            <a href="#" class="btn btn-white">Start Free Trial</a>
+            <h2 class="cta-title">Ready to Transform Your Construction Business?</h2>
+            <a href="#" class="btn btn-white">Get Started Now</a>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container footer-content">
-            <div>
-                <h3 class="footer-title">BuildCRM</h3>
-                <p>Smart construction management solution</p>
-            </div>
-            <div>
-                <h3 class="footer-title">Product</h3>
-                <ul class="footer-links">
-                    <li><a href="#" class="footer-link">Features</a></li>
-                    <li><a href="#" class="footer-link">Pricing</a></li>
-                    <li><a href="#" class="footer-link">Testimonials</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="footer-title">Company</h3>
-                <ul class="footer-links">
-                    <li><a href="#" class="footer-link">About</a></li>
-                    <li><a href="#" class="footer-link">Contact</a></li>
-                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
-                </ul>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">BuildCRM</h3>
+                    <p>Smart construction management for modern professionals.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Product</h3>
+                    <a href="#" class="footer-link">Features</a>
+                    <a href="#" class="footer-link">Pricing</a>
+                    <a href="#" class="footer-link">Integration</a>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Company</h3>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>
