@@ -3,154 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revolutionary CRM for the Construction Industry</title>
-    <meta name="description" content="Discover a user-friendly CRM tailored for the construction industry, featuring OCR capabilities and industry-specific functionalities.">
+    <title>User-Friendly Construction CRM</title>
+    <meta name="description" content="Discover a user-friendly CRM tailored for the construction industry, equipped with features like OCR to boost efficiency.">
     <style>
         :root {
             --primary-color: #4CAF50; /* Green */
             --secondary-color: #FFFFFF; /* White */
             --accent-color: #000000; /* Black */
-            --body-font: 'Arial', sans-serif;
-            --heading-font: 'Helvetica', sans-serif;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
         body {
-            font-family: var(--body-font);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
             background-color: var(--secondary-color);
-            color: var(--accent-color);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
         }
         header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px;
             text-align: center;
-            padding: 50px 0;
         }
         h1 {
-            font-family: var(--heading-font);
             font-size: 2.5em;
-            color: var(--primary-color);
+            margin: 0;
         }
         h2 {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin: 20px 0;
         }
-        p {
-            margin: 10px 0;
-            font-size: 1.1em;
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
         }
-        .cta-primary {
+        .cta-button {
             display: inline-block;
             background-color: var(--primary-color);
             color: var(--secondary-color);
-            padding: 15px 30px;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+        .social-proof {
             margin: 20px 0;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .cta-secondary {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--primary-color);
-            padding: 10px 25px;
-            margin: 10px 0;
-            text-decoration: none;
-            border: 2px solid var(--primary-color);
-            border-radius: 5px;
-        }
-        .feature, .use-case {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px 0;
-            transition: all 0.3s ease;
-        }
-        .feature:hover, .use-case:hover {
-            border-color: var(--primary-color);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-        .testimonials {
-            margin: 50px 0;
             text-align: center;
-        }
-        .testimonial {
-            margin: 10px 0;
-            font-style: italic;
         }
         footer {
             text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid #ccc;
+            padding: 20px;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
         }
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
             }
             h2 {
-                font-size: 1.25em;
+                font-size: 1.5em;
             }
-            .cta-primary, .cta-secondary {
+            .cta-button {
                 padding: 10px 20px;
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Transform Your Construction Projects</h1>
-            <h2>User-Friendly CRM Designed for the Construction Industry</h2>
-            <a href="#get-started" class="cta-primary">Get Started Free</a>
-        </div>
+        <h1>Your Construction CRM</h1>
+        <h2>Designed for Efficiency and Simplicity</h2>
+        <a href="#signup" class="cta-button">Get Started Free</a>
     </header>
-    <div class="container">
-        <section>
-            <h2>Why Choose Our CRM?</h2>
-            <div class="feature">
-                <h3>User-Friendly Design</h3>
-                <p>Perfect for those new to tech, our CRM simplifies project management with an intuitive interface.</p>
-            </div>
-            <div class="feature">
-                <h3>Advanced OCR Functionality</h3>
-                <p>Easily capture contacts and deals with our state-of-the-art Optical Character Recognition technology.</p>
-            </div>
-            <div class="feature">
-                <h3>Industry-Specific Features</h3>
-                <p>Tailored functionalities meet the unique needs of construction professionals.</p>
-            </div>
-        </section>
-        <section>
-            <h2>Use Cases</h2>
-            <div class="use-case">
-                <h3>Streamline Your Projects</h3>
-                <p>Manage timelines, budgets, and resources more efficiently, minimizing delays and maximizing productivity.</p>
-            </div>
-            <div class="use-case">
-                <h3>Improve Client Engagement</h3>
-                <p>Enhance communication and relationship management with easy-to-use tools at your fingertips.</p>
-            </div>
-        </section>
-        <section class="testimonials">
-            <h2>What Our Users Say</h2>
-            <div class="testimonial">
-                <p>"This CRM has transformed the way we manage projects. It's user-friendly and efficient!" - Alex R., Construction Manager</p>
-            </div>
-            <div class="testimonial">
-                <p>"The OCR feature is a game changer for me. I can capture information instantly!" - Jamie T., Project Coordinator</p>
-            </div>
-        </section>
-        <footer>
-            <p>&copy; 2025 Construction CRM. All rights reserved.</p>
-            <a href="#learn-more" class="cta-secondary">Learn More</a>
-        </footer>
-    </div>
+    <section>
+        <h2>Why Choose Our CRM?</h2>
+        <p>Our CRM is specifically tailored to meet the needs of the construction industry, helping teams perform better with easy-to-use tools.</p>
+        <h2>Key Features</h2>
+        <ul>
+            <li>User-friendly design for novice tech users.</li>
+            <li>Clean and approachable interface with a color palette of green, white, and black.</li>
+            <li>OCR functionality to effortlessly capture contacts and deals.</li>
+            <li>Industry-specific features designed for unique challenges in construction.</li>
+        </ul>
+        <h2>What Our Users Say</h2>
+        <div class="social-proof">
+            <p>"This CRM has transformed the way our team operates, making project management effortless!" - John D., Construction Manager</p>
+            <p>"Easy to use and incredibly helpful for our construction workflows!" - Sarah L., Project Coordinator</p>
+        </div>
+        <a href="#signup" class="cta-button">See Demo</a>
+    </section>
+    <footer>
+        <p>&copy; 2025 Your Construction CRM. All rights reserved.</p>
+    </footer>
 </body>
 </html>
