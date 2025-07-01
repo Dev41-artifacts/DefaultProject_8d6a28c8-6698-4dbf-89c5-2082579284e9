@@ -17,7 +17,7 @@
     
     <style>
         /* CSS Framework from previous response */
-        /* [Previous CSS code remains exactly the same - insert here] */
+        /* [Previous CSS code remains exactly the same - insert it here] */
         
         /* Additional Custom Styles for Construction Theme */
         .hero-pattern {
@@ -26,22 +26,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(30deg, var(--primary-50) 12%, transparent 12.5%, transparent 87%, var(--primary-50) 87.5%, var(--primary-50)),
-                            linear-gradient(150deg, var(--primary-50) 12%, transparent 12.5%, transparent 87%, var(--primary-50) 87.5%, var(--primary-50)),
-                            linear-gradient(30deg, var(--primary-50) 12%, transparent 12.5%, transparent 87%, var(--primary-50) 87.5%, var(--primary-50)),
-                            linear-gradient(150deg, var(--primary-50) 12%, transparent 12.5%, transparent 87%, var(--primary-50) 87.5%, var(--primary-50)),
-                            linear-gradient(60deg, var(--primary-100) 25%, transparent 25.5%, transparent 75%, var(--primary-100) 75%, var(--primary-100)),
-                            linear-gradient(60deg, var(--primary-100) 25%, transparent 25.5%, transparent 75%, var(--primary-100) 75%, var(--primary-100));
-            background-size: 80px 140px;
-            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
-            opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         
         .feature-icon {
             width: 64px;
             height: 64px;
-            background: var(--primary-100);
-            border-radius: 16px;
+            background: var(--primary-50);
+            border-radius: var(--border-radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -59,7 +51,7 @@
             height: 64px;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid var(--primary-100);
+            margin-bottom: var(--space-4);
         }
         
         .testimonial-company {
@@ -77,49 +69,17 @@
         }
         
         .stats-number {
-            font-size: var(--text-5xl);
-            font-weight: 800;
+            font-size: var(--text-4xl);
+            font-weight: 700;
             color: var(--primary-600);
             margin-bottom: var(--space-2);
-            line-height: 1;
         }
         
         .stats-label {
             color: var(--text-secondary);
             font-size: var(--text-sm);
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .ocr-demo {
-            position: relative;
-            border-radius: var(--border-radius-2xl);
-            overflow: hidden;
-            box-shadow: var(--shadow-2xl);
-        }
-        
-        .ocr-demo img {
-            width: 100%;
-            height: auto;
-            transform: scale(1.1);
-            transition: var(--transition-normal);
-        }
-        
-        .ocr-demo:hover img {
-            transform: scale(1.2);
-        }
-        
-        .ocr-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8));
-            display: flex;
-            align-items: flex-end;
-            padding: var(--space-8);
-            color: white;
+            letter-spacing: 0.05em;
         }
     </style>
 </head>
@@ -132,132 +92,372 @@
                 <li><a href="#features" class="nav-link">Features</a></li>
                 <li><a href="#solutions" class="nav-link">Solutions</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#resources" class="nav-link">Resources</a></li>
-                <li><a href="#company" class="nav-link">Company</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div>
                 <a href="#" class="btn btn-secondary">Sign In</a>
-                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary">Start Free Trial</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="section-hero">
+    <section class="section-hero" id="hero">
         <div class="hero-pattern"></div>
+        <div id="particles-js" class="absolute inset-0"></div>
         <div class="container">
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
                     <h1 class="text-display-2 mb-6">
                         Streamline Your <span class="text-gradient">Construction Projects</span> with Smart CRM
                     </h1>
                     <p class="text-xl text-secondary mb-8">
-                        BuildFlow is the user-friendly CRM designed specifically for construction professionals. Capture leads with OCR technology, manage projects effortlessly, and grow your business.
+                        BuildFlow is the user-friendly CRM designed specifically for construction professionals. Featuring OCR technology, intuitive project management, and seamless team collaboration.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="btn btn-primary btn-lg">Start Free Trial</a>
-                        <a href="#" class="btn btn-secondary btn-lg">Watch Demo</a>
+                        <a href="#" class="btn btn-primary btn-lg">
+                            Get Started Free
+                        </a>
+                        <a href="#" class="btn btn-secondary btn-lg">
+                            Watch Demo
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-8">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>14-day free trial</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>No credit card required</span>
+                        </div>
                     </div>
                 </div>
                 <div data-aos="fade-left" class="relative">
-                    <div class="ocr-demo">
-                        <img src="https://placehold.co/600x400" alt="BuildFlow CRM Dashboard">
-                        <div class="ocr-overlay">
-                            <p class="text-lg">Instantly capture business cards and documents with our OCR technology</p>
-                        </div>
-                    </div>
+                    <div class="absolute inset-0 bg-gradient-radial"></div>
+                    <img src="https://placehold.co/600x400" alt="BuildFlow Dashboard" class="rounded-xl shadow-2xl">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="section bg-secondary">
+    <section class="section bg-secondary" id="stats">
         <div class="container">
             <div class="grid grid-cols-4 gap-8">
-                <div class="stats-card" data-aos="fade-up">
-                    <div class="stats-number counter" data-target="500">0</div>
+                <div class="stats-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stats-number" data-target="500">0</div>
                     <div class="stats-label">Construction Companies</div>
                 </div>
                 <div class="stats-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stats-number counter" data-target="50">0</div>
+                    <div class="stats-number" data-target="50">0</div>
                     <div class="stats-label">Time Saved (%)</div>
                 </div>
                 <div class="stats-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stats-number counter" data-target="10000">0</div>
+                    <div class="stats-number" data-target="10000">0</div>
                     <div class="stats-label">Projects Managed</div>
                 </div>
                 <div class="stats-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stats-number counter" data-target="99">0</div>
+                    <div class="stats-number" data-target="99">0</div>
                     <div class="stats-label">Customer Satisfaction</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- [Additional sections would continue here with the same level of detail and sophistication] -->
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-h2 mb-4">Powerful Features for Modern Construction</h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    Built specifically for construction professionals, our platform combines powerful features with an intuitive interface.
+                </p>
+            </div>
+            <div class="grid grid-cols-3 gap-8">
+                <!-- Feature 1: OCR Technology -->
+                <div class="card card-feature" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-h4 mb-4">Smart OCR Technology</h3>
+                    <p class="text-secondary">
+                        Instantly capture and digitize business cards, documents, and project details with our advanced OCR technology.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Project Management -->
+                <div class="card card-feature" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-h4 mb-4">Project Management</h3>
+                    <p class="text-secondary">
+                        Keep all your projects organized with intuitive task management, timelines, and resource allocation tools.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Team Collaboration -->
+                <div class="card card-feature" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-h4 mb-4">Team Collaboration</h3>
+                    <p class="text-secondary">
+                        Connect your entire team with real-time updates, document sharing, and seamless communication tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-secondary" id="testimonials">
+        <div class="container">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-h2 mb-4">Trusted by Construction Leaders</h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    See how BuildFlow is transforming construction management for companies across the industry.
+                </p>
+            </div>
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="card card-testimonial">
+                            <img src="https://placehold.co/64x64" alt="John Smith" class="testimonial-avatar">
+                            <p class="mb-4">"BuildFlow has revolutionized how we manage our construction projects. The OCR feature alone has saved us countless hours of manual data entry."</p>
+                            <strong>John Smith</strong>
+                            <div class="testimonial-company">Project Manager, ABC Construction</div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="card card-testimonial">
+                            <img src="https://placehold.co/64x64" alt="Sarah Johnson" class="testimonial-avatar">
+                            <p class="mb-4">"The intuitive interface made it easy for our team to adopt. We've seen a 50% increase in project efficiency since implementing BuildFlow."</p>
+                            <strong>Sarah Johnson</strong>
+                            <div class="testimonial-company">CEO, Johnson Builders</div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="card card-testimonial">
+                            <img src="https://placehold.co/64x64" alt="Mike Wilson" class="testimonial-avatar">
+                            <p class="mb-4">"Finally, a CRM that understands construction. The project management features are exactly what we needed to scale our operations."</p>
+                            <strong>Mike Wilson</strong>
+                            <div class="testimonial-company">Operations Director, Wilson Construction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-gradient-primary text-white" id="cta">
+        <div class="container text-center">
+            <h2 class="text-h2 mb-6" data-aos="fade-up">Ready to Transform Your Construction Business?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Join hundreds of construction companies already using BuildFlow to streamline their operations.
+            </p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="btn btn-lg" style="background: white; color: var(--primary-600);">
+                    Start Your Free Trial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section bg-dark text-white">
+        <div class="container">
+            <div class="grid grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">BuildFlow</h3>
+                    <p class="text-neutral-400">
+                        Transforming construction management with intelligent solutions.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Features</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Solutions</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">LinkedIn</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 pt-8 text-center text-neutral-400">
+                <p>&copy; 2024 BuildFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- External JavaScript Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/lib/typed.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/lib/typed.min.js"></script>
 
     <script>
-        // Initialize all libraries and animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS
-            AOS.init({
-                duration: 1000,
-                easing: 'ease-in-out',
-                once: true,
-                offset: 100
-            });
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
 
-            // Initialize counters
-            const observers = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const target = parseInt(entry.target.dataset.target);
-                        animateCounter(entry.target, target);
-                        observers.unobserve(entry.target);
-                    }
-                });
-            });
-
-            document.querySelectorAll('.counter').forEach(counter => {
-                observers.observe(counter);
-            });
-
-            function animateCounter(element, target) {
-                let current = 0;
-                const increment = target / 100;
-                const timer = setInterval(() => {
-                    current += increment;
-                    element.textContent = Math.floor(current);
-                    if (current >= target) {
-                        element.textContent = target;
-                        clearInterval(timer);
-                    }
-                }, 20);
+        // Initialize Swiper
+        new Swiper('.testimonials-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
             }
+        });
 
-            // GSAP Animations
-            gsap.from('.hero-title', {
-                duration: 1.2,
-                y: 100,
-                opacity: 0,
-                ease: 'power3.out'
+        // Initialize Particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 50,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#10b981'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#10b981',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                }
+            }
+        });
+
+        // Animated Counter Function
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                element.textContent = Math.floor(current);
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                }
+            }, 20);
+        }
+
+        // Initialize counters when in viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateCounter(entry.target, target);
+                    observer.unobserve(entry.target);
+                }
             });
+        });
 
-            gsap.from('.hero-subtitle', {
-                duration: 1.2,
-                y: 50,
-                opacity: 0,
-                delay: 0.3,
-                ease: 'power3.out'
+        document.querySelectorAll('.stats-number').forEach(counter => {
+            observer.observe(counter);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
