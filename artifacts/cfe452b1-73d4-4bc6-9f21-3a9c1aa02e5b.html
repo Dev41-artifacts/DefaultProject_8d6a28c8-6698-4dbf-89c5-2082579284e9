@@ -1,12 +1,10 @@
-Here's a complete HTML document for the construction industry CRM landing page, incorporating all the requirements and advanced features:
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildCRM - Revolutionary CRM for Construction Industry</title>
-    <meta name="description" content="BuildCRM: The user-friendly, innovative CRM solution tailored for the construction industry. Streamline projects, manage contacts, and boost efficiency with our cutting-edge OCR technology.">
+    <title>BuildCore CRM - Revolutionary Construction Management Platform</title>
+    <meta name="description" content="BuildCore CRM: The ultimate construction management solution. Streamline projects, boost efficiency, and grow your business with our intuitive platform designed for the modern construction industry.">
     
     <!-- Advanced Font Integration -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +16,8 @@ Here's a complete HTML document for the construction industry CRM landing page, 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
     <style>
+        /* ADVANCED CSS FRAMEWORK WITH EXTERNAL LIBRARY SUPPORT */
+        
         /* CSS RESET & OPTIMIZATION */
         *, *::before, *::after {
             box-sizing: border-box;
@@ -44,15 +44,15 @@ Here's a complete HTML document for the construction industry CRM landing page, 
         :root {
             /* Advanced Color System */
             --primary-50: #e6f7ed;
-            --primary-100: #c3ecd3;
-            --primary-200: #9ce0b6;
-            --primary-300: #74d498;
-            --primary-400: #4dc97f;
+            --primary-100: #c2ebd3;
+            --primary-200: #9adeb6;
+            --primary-300: #71d198;
+            --primary-400: #4dc47f;
             --primary-500: #10b981;
-            --primary-600: #0ea875;
-            --primary-700: #0c9669;
-            --primary-800: #0a855d;
-            --primary-900: #076446;
+            --primary-600: #059669;
+            --primary-700: #047857;
+            --primary-800: #065f46;
+            --primary-900: #064e3b;
             
             /* Sophisticated Neutral System */
             --neutral-50: #fafafa;
@@ -412,4 +412,308 @@ Here's a complete HTML document for the construction industry CRM landing page, 
                 transform: translateY(0px);
             }
             50% {
-                transform: translate
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* ADVANCED UTILITY CLASSES */
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+        }
+        
+        .bg-gradient-radial {
+            background: radial-gradient(circle at center, var(--primary-100), transparent);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            :root {
+                --text-6xl: 3rem;
+                --text-5xl: 2.25rem;
+                --text-4xl: 1.875rem;
+                --space-24: 4rem;
+                --space-32: 6rem;
+            }
+            
+            .container {
+                padding: 0 var(--space-4);
+            }
+            
+            .grid-cols-2,
+            .grid-cols-3,
+            .grid-cols-4,
+            .grid-cols-6 {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .section {
+                padding: var(--space-16) 0;
+            }
+            
+            .section-hero {
+                min-height: 80vh;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            :root {
+                --text-6xl: 2.5rem;
+                --text-5xl: 2rem;
+                --container-padding: var(--space-4);
+            }
+        }
+        
+        /* ACCESSIBILITY IMPROVEMENTS */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* PRINT STYLES */
+        @media print {
+            .navbar,
+            .btn,
+            [data-aos] {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+                color: black;
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Advanced Navigation with Glass Morphism -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">BuildCore CRM</a>
+            <ul class="nav-menu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#company" class="nav-link">Company</a></li>
+            </ul>
+            <div>
+                <a href="#" class="btn btn-secondary">Sign In</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Advanced Effects -->
+    <section class="section-hero" id="hero">
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="grid grid-cols-2">
+                <div data-aos="fade-right">
+                    <h1 class="text-h1 mb-6">Revolutionize Your <span class="text-gradient">Construction Management</span></h1>
+                    <p class="text-xl mb-8">BuildCore CRM: The ultimate solution for <span id="typed-text"></span></p>
+                    <div class="flex gap-4">
+                        <a href="#" class="btn btn-primary btn-lg">Start Free Trial</a>
+                        <a href="#" class="btn btn-secondary btn-lg">Watch Demo</a>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="https://via.placeholder.com/600x400" alt="BuildCore CRM Dashboard" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats/Metrics Bar -->
+    <section class="bg-gradient-primary text-white py-12">
+        <div class="container">
+            <div class="grid grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="200">0</span>+</h3>
+                    <p>Construction Companies</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="50">0</span>%</h3>
+                    <p>Faster Project Completion</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="99">0</span>.9%</h3>
+                    <p>Uptime</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">$<span class="counter" data-target="10">0</span>M+</h3>
+                    <p>Revenue Generated</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="section bg-secondary">
+        <div class="container">
+            <h2 class="text-h2 text-center mb-16">Powerful Features for Modern Construction</h2>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="card card-feature" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/80" alt="Project Management" class="mb-6 mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Intelligent Project Management</h3>
+                    <p>Streamline your construction projects with AI-powered scheduling, resource allocation, and progress tracking.</p>
+                </div>
+                <div class="card card-feature" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/80" alt="Document Management" class="mb-6 mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Smart Document Management</h3>
+                    <p>Centralize all your project documents, contracts, and blueprints with advanced search and version control.</p>
+                </div>
+                <div class="card card-feature" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/80" alt="Financial Tools" class="mb-6 mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Comprehensive Financial Tools</h3>
+                    <p>Manage budgets, invoices, and expenses with real-time financial reporting and forecasting.</p>
+                </div>
+                <div class="card card-feature" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/80" alt="Team Collaboration" class="mb-6 mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Seamless Team Collaboration</h3>
+                    <p>Foster communication and coordination among team members, subcontractors, and clients with integrated messaging and task assignment.</p>
+                </div>
+                <div class="card card-feature" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/80" alt="Mobile Access" class="mb-6 mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">On-Site Mobile Access</h3>
+                    <p>Access critical project information and update progress from anywhere with our powerful mobile app.</p>
+                </div>
+                <div class="card card-feature" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/80" alt="Compliance Management" class="mb-6 mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Automated Compliance Management</h3>
+                    <p>Stay on top of safety regulations and industry standards with built-in compliance checklists and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Process -->
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2 class="text-h2 text-center mb-16">How BuildCore CRM Works</h2>
+            <div class="grid grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <div class="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold text-primary-600">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Project Setup</h3>
+                    <p>Easily create new projects, define goals, and set milestones.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold text-primary-600">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Team Onboarding</h3>
+                    <p>Invite team members, assign roles, and set permissions.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold text-primary-600">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Task Management</h3>
+                    <p>Create, assign, and track tasks with our intuitive interface.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold text-primary-600">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Real-time Monitoring</h3>
+                    <p>Track progress, generate reports, and make data-driven decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section id="testimonials" class="section bg-secondary">
+        <div class="container">
+            <h2 class="text-h2 text-center mb-16">What Our Customers Say</h2>
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card card-testimonial">
+                            <p class="mb-6">"BuildCore CRM has transformed our project management process. We've seen a 40% increase in on-time project completion since implementing the platform."</p>
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/60" alt="John Doe" class="rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold">John Doe</h4>
+                                    <p class="text-sm text-gray-600">Project Manager, ABC Construction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card card-testimonial">
+                            <p class="mb-6">"The financial tools in BuildCore CRM have helped us reduce budget overruns by 25%. It's an indispensable part of our operations now."</p>
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/60" alt="Jane Smith" class="rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold">Jane Smith</h4>
+                                    <p class="text-sm text-gray-600">CFO, XYZ Builders</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card card-testimonial">
+                            <p class="mb-6">"The mobile app has been a game-changer for our on-site teams. We can update progress and resolve issues in real-time, improving our efficiency by 30%."</p>
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/60" alt="Mike Johnson" class="rounded-full mr-4">
+                                <div>
+                                    <h4 class="font-semibold">Mike Johnson</h4>
+                                    <p class="text-sm text-gray-600">Site Supervisor, 123 Constructors</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="text-h2 text-center mb-16">Simple, Transparent Pricing</h2>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="card" data-aos="fade-up">
+                    <h3 class="text-2xl font-semibold mb-4">Starter</h3>
+                    <p class="text-4xl font-bold mb-6">$99<span class="text-base font-normal">/month</span></p>
+                    <ul class="mb-8">
+                        <li class="mb-2">✅ Up to 5 projects</li>
+                        <li class="mb-2">✅ Basic project management</li>
+                        <li class="mb-2">✅ 5GB document storage</li>
+                        <li class="mb-2">✅ Email support</li>
+                    </ul>
+                    
