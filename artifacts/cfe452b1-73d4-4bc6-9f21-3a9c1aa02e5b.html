@@ -3,114 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User-friendly CRM for the Construction Industry</title>
-    <meta name="description" content="Discover a user-friendly CRM tailored for the construction industry, designed for tech-savvy and novice users alike.">
+    <title>Revolutionizing CRM for the Construction Industry</title>
+    <meta name="description" content="Discover a user-friendly CRM designed for the construction industry, tailored to meet the needs of tech-savvy users and novices alike.">
     <style>
         :root {
             --primary-color: #4CAF50; /* Green */
             --secondary-color: #FFFFFF; /* White */
             --accent-color: #000000; /* Black */
-            --font-family: Arial, sans-serif;
+            --font-family: 'Arial', sans-serif;
+            --max-width: 1200px;
         }
         body {
-            margin: 0;
             font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
             background-color: var(--secondary-color);
-            color: var(--accent-color);
+        }
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 20px;
         }
         header {
-            background: var(--primary-color);
-            padding: 20px;
             text-align: center;
+            padding: 50px 20px;
+            background: var(--primary-color);
             color: var(--secondary-color);
         }
         h1 {
-            margin: 0;
             font-size: 2.5em;
+            margin: 0;
         }
         h2 {
+            margin: 20px 0;
             font-size: 1.5em;
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .hero-cta {
+        .cta-button {
             background: var(--accent-color);
             color: var(--secondary-color);
             padding: 15px 30px;
-            margin: 20px 0;
             text-decoration: none;
-            font-weight: bold;
             border-radius: 5px;
+            font-weight: bold;
             transition: background 0.3s;
         }
-        .hero-cta:hover {
-            background: var(--primary-color);
+        .cta-button:hover {
+            background: #333333;
         }
-        .features {
+        .social-proof {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .features, .use-cases {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 800px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .feature, .use-case {
+            background: #f4f4f4;
+            margin: 10px;
             padding: 20px;
+            flex: 1 0 30%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .feature {
-            background: var(--secondary-color);
-            border: 1px solid var(--primary-color);
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .testimonials {
-            margin-top: 40px;
+        footer {
             text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+            color: #666;
         }
-        .testimonial {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-            padding: 20px;
-            background: var(--primary-color);
-            color: var(--secondary-color);
+        @media (max-width: 768px) {
+            .features, .use-cases {
+                flex-direction: column;
+            }
+            .feature, .use-case {
+                flex: 1 0 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>User-Friendly CRM for the Construction Industry</h1>
-        <h2>Built for tech-savvy and novice users alike</h2>
+        <h1>Transform Your Construction Projects with Our Innovative CRM</h1>
+        <h2>Simple, Powerful, Tailored for Industry Needs</h2>
+        <a href="#cta" class="cta-button">Get Started Free</a>
     </header>
     <div class="container">
-        <a href="#signup" class="hero-cta">Get Started Free</a>
+        <div class="social-proof">
+            <h2>Trusted by Industry Leaders</h2>
+            <img src="logos-placeholder.png" alt="Client Logos" />
+        </div>
         <div class="features">
             <div class="feature">
-                <h3>User-Friendly Design</h3>
-                <p>Simple and intuitive, catering to individuals unfamiliar with complex tools.</p>
+                <h3>User-Friendly Interface</h3>
+                <p>Designed for novice tech users, our CRM simplifies management tasks with an intuitive layout.</p>
             </div>
             <div class="feature">
-                <h3>OCR Functionality</h3>
-                <p>Easily capture contacts and deals with our integrated OCR technology.</p>
+                <h3>Optical Character Recognition</h3>
+                <p>Easily capture contacts and deals with our built-in OCR functionality, just click and identify!</p>
             </div>
             <div class="feature">
-                <h3>Construction Tailored Features</h3>
-                <p>Designed specifically to address the unique needs of the construction industry.</p>
+                <h3>Customized for Construction</h3>
+                <p>Features tailored to meet the specific needs of the construction industry, enhancing productivity.</p>
             </div>
         </div>
-        <div class="testimonials">
-            <h2>What Our Users Say</h2>
-            <div class="testimonial">"This CRM has transformed our workflow!" - John D., Project Manager</div>
-            <div class="testimonial">"So easy to use, even for those new to technology." - Sarah K., Site Supervisor</div>
+        <div class="use-cases">
+            <div class="use-case">
+                <h3>Project Management</h3>
+                <p>Streamline project timelines and resources effectively with our CRM's advanced tools.</p>
+            </div>
+            <div class="use-case">
+                <h3>Client Relations</h3>
+                <p>Build strong client relationships through efficient communication and tracking systems.</p>
+            </div>
+            <div class="use-case">
+                <h3>Data Insights</h3>
+                <p>Gain actionable insights through analytics that help drive construction decisions.</p>
+            </div>
         </div>
+        <footer>
+            <p>&copy; 2025 Construction CRM. All rights reserved.</p>
+            <a href="#contact" class="cta-button">Learn More</a>
+        </footer>
     </div>
-    <footer class="footer">
-        <p>&copy; 2025 Construction CRM. All Rights Reserved.</p>
-        <a href="#signup" class="hero-cta">See Demo</a>
-    </footer>
 </body>
 </html>
