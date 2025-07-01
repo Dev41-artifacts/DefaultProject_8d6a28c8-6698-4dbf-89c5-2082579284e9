@@ -3,22 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildCore CRM - Revolutionary Construction Management Platform</title>
-    <meta name="description" content="BuildCore CRM: The ultimate construction management solution. Streamline projects, boost efficiency, and grow your business with our intuitive platform designed for the modern construction industry.">
+    <title>BuildFlow CRM - Revolutionizing Construction Project Management</title>
+    <meta name="description" content="BuildFlow CRM: The user-friendly, innovative solution for construction professionals. Streamline projects, manage contacts, and boost efficiency with our tailored CRM.">
     
-    <!-- Advanced Font Integration -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- External CSS Libraries -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
     <style>
-        /* ADVANCED CSS FRAMEWORK WITH EXTERNAL LIBRARY SUPPORT */
+        :root {
+            --primary-50: #e6f7ed;
+            --primary-100: #c3ebd3;
+            --primary-200: #9cdfb6;
+            --primary-300: #74d398;
+            --primary-400: #4dc77b;
+            --primary-500: #10b981;
+            --primary-600: #0ea271;
+            --primary-700: #0c8b61;
+            --primary-800: #0a7452;
+            --primary-900: #085d42;
+            
+            --neutral-50: #f9fafb;
+            --neutral-100: #f3f4f6;
+            --neutral-200: #e5e7eb;
+            --neutral-300: #d1d5db;
+            --neutral-400: #9ca3af;
+            --neutral-500: #6b7280;
+            --neutral-600: #4b5563;
+            --neutral-700: #374151;
+            --neutral-800: #1f2937;
+            --neutral-900: #111827;
+            
+            --success: #22c55e;
+            --warning: #eab308;
+            --error: #ef4444;
+            --info: #3b82f6;
+            
+            --text-primary: var(--neutral-900);
+            --text-secondary: var(--neutral-600);
+            --text-tertiary: var(--neutral-500);
+            --text-inverse: #ffffff;
+            
+            --bg-primary: #ffffff;
+            --bg-secondary: var(--neutral-50);
+            --bg-tertiary: var(--neutral-100);
+            --bg-dark: var(--neutral-900);
+            
+            --container-max: 1200px;
+            --container-padding: 2rem;
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            
+            --border-radius: 0.5rem;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
         
-        /* CSS RESET & OPTIMIZATION */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -26,313 +75,51 @@
         }
         
         html {
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
             font-size: 16px;
+            scroll-behavior: smooth;
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
             color: var(--text-primary);
             background-color: var(--bg-primary);
-            overflow-x: hidden;
         }
         
-        /* ADVANCED DESIGN SYSTEM */
-        :root {
-            /* Advanced Color System */
-            --primary-50: #e6f7ed;
-            --primary-100: #c2ebd3;
-            --primary-200: #9adeb6;
-            --primary-300: #71d198;
-            --primary-400: #4dc47f;
-            --primary-500: #10b981;
-            --primary-600: #059669;
-            --primary-700: #047857;
-            --primary-800: #065f46;
-            --primary-900: #064e3b;
-            
-            /* Sophisticated Neutral System */
-            --neutral-50: #fafafa;
-            --neutral-100: #f4f4f5;
-            --neutral-200: #e4e4e7;
-            --neutral-300: #d4d4d8;
-            --neutral-400: #a1a1aa;
-            --neutral-500: #71717a;
-            --neutral-600: #52525b;
-            --neutral-700: #3f3f46;
-            --neutral-800: #27272a;
-            --neutral-900: #18181b;
-            
-            /* Semantic Colors */
-            --success: #10b981;
-            --warning: #f59e0b;
-            --error: #ef4444;
-            --info: #3b82f6;
-            
-            /* Text System */
-            --text-primary: var(--neutral-900);
-            --text-secondary: var(--neutral-600);
-            --text-tertiary: var(--neutral-500);
-            --text-inverse: #ffffff;
-            
-            /* Background System */
-            --bg-primary: #ffffff;
-            --bg-secondary: var(--neutral-50);
-            --bg-tertiary: var(--neutral-100);
-            --bg-dark: var(--neutral-900);
-            
-            /* Advanced Typography Scale */
-            --text-xs: 0.75rem;
-            --text-sm: 0.875rem;
-            --text-base: 1rem;
-            --text-lg: 1.125rem;
-            --text-xl: 1.25rem;
-            --text-2xl: 1.5rem;
-            --text-3xl: 1.875rem;
-            --text-4xl: 2.25rem;
-            --text-5xl: 3rem;
-            --text-6xl: 3.75rem;
-            --text-7xl: 4.5rem;
-            --text-8xl: 6rem;
-            --text-9xl: 8rem;
-            
-            /* Advanced Spacing System */
-            --space-px: 1px;
-            --space-0: 0;
-            --space-1: 0.25rem;
-            --space-2: 0.5rem;
-            --space-3: 0.75rem;
-            --space-4: 1rem;
-            --space-5: 1.25rem;
-            --space-6: 1.5rem;
-            --space-8: 2rem;
-            --space-10: 2.5rem;
-            --space-12: 3rem;
-            --space-16: 4rem;
-            --space-20: 5rem;
-            --space-24: 6rem;
-            --space-32: 8rem;
-            --space-40: 10rem;
-            --space-48: 12rem;
-            --space-56: 14rem;
-            --space-64: 16rem;
-            
-            /* Advanced Shadow System */
-            --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-            --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
-            
-            /* Animation System */
-            --transition-none: none;
-            --transition-all: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* Layout Constraints */
-            --container-max: 1200px;
-            --container-padding: var(--space-6);
-            --border-radius-sm: 0.125rem;
-            --border-radius: 0.375rem;
-            --border-radius-md: 0.5rem;
-            --border-radius-lg: 0.75rem;
-            --border-radius-xl: 1rem;
-            --border-radius-2xl: 1.5rem;
-            --border-radius-full: 9999px;
-        }
-        
-        /* ADVANCED TYPOGRAPHY */
-        .text-display-1 {
-            font-size: var(--text-8xl);
-            font-weight: 800;
-            line-height: 0.9;
-            letter-spacing: -0.025em;
-        }
-        
-        .text-display-2 {
-            font-size: var(--text-7xl);
-            font-weight: 700;
-            line-height: 1;
-            letter-spacing: -0.025em;
-        }
-        
-        .text-h1 {
-            font-size: var(--text-6xl);
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.025em;
-        }
-        
-        .text-h2 {
-            font-size: var(--text-5xl);
-            font-weight: 600;
-            line-height: 1.2;
-            letter-spacing: -0.025em;
-        }
-        
-        .text-h3 {
-            font-size: var(--text-4xl);
-            font-weight: 600;
-            line-height: 1.25;
-        }
-        
-        .text-h4 {
-            font-size: var(--text-3xl);
-            font-weight: 600;
-            line-height: 1.375;
-        }
-        
-        /* ADVANCED LAYOUT SYSTEM */
         .container {
             max-width: var(--container-max);
             margin: 0 auto;
             padding: 0 var(--container-padding);
         }
         
-        .section {
-            padding: var(--space-24) 0;
-            position: relative;
-        }
-        
-        .section-hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* ADVANCED GRID SYSTEM */
-        .grid {
-            display: grid;
-            gap: var(--space-6);
-        }
-        
-        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        .grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-        .grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
-        
-        /* ADVANCED CARD SYSTEM */
-        .card {
-            background: var(--bg-primary);
-            border-radius: var(--border-radius-xl);
-            box-shadow: var(--shadow-lg);
-            padding: var(--space-8);
-            transition: var(--transition-normal);
-            border: 1px solid var(--neutral-200);
-        }
-        
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-2xl);
-        }
-        
-        .card-feature {
-            text-align: center;
-            padding: var(--space-10);
-        }
-        
-        .card-testimonial {
-            padding: var(--space-8);
-            position: relative;
-        }
-        
-        .card-testimonial::before {
-            content: '"';
-            position: absolute;
-            top: var(--space-4);
-            left: var(--space-6);
-            font-size: var(--text-5xl);
-            color: var(--primary-500);
-            font-family: Georgia, serif;
-            line-height: 1;
-        }
-        
-        /* ADVANCED BUTTON SYSTEM */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: var(--space-4) var(--space-8);
-            border-radius: var(--border-radius-lg);
-            font-weight: 600;
-            font-size: var(--text-base);
-            text-decoration: none;
-            transition: var(--transition-fast);
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
-            color: white;
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .btn-secondary {
-            background: var(--bg-primary);
-            color: var(--primary-600);
-            border: 2px solid var(--primary-200);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--primary-50);
-            border-color: var(--primary-300);
-        }
-        
-        .btn-lg {
-            padding: var(--space-6) var(--space-12);
-            font-size: var(--text-lg);
-        }
-        
-        /* ADVANCED NAVIGATION */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--neutral-200);
-            transition: var(--transition-fast);
         }
         
         .nav-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: var(--space-4) 0;
+            align-items: center;
+            height: 80px;
         }
         
         .nav-logo {
-            font-size: var(--text-2xl);
-            font-weight: 800;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--primary-600);
             text-decoration: none;
         }
         
         .nav-menu {
             display: flex;
-            align-items: center;
-            gap: var(--space-8);
+            gap: var(--space-md);
             list-style: none;
         }
         
@@ -340,358 +127,280 @@
             color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
-            transition: var(--transition-fast);
-            position: relative;
+            transition: color 0.3s ease;
         }
         
         .nav-link:hover {
-            color: var(--text-primary);
+            color: var(--primary-600);
         }
         
-        .nav-link::after {
-            content: '';
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-600);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-700);
+        }
+        
+        .btn-secondary {
+            background-color: var(--bg-secondary);
+            color: var(--primary-600);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-100);
+        }
+        
+        .hero {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary-50), var(--bg-secondary));
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: var(--space-md);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .hero-image {
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--primary-500);
-            transform: scaleX(0);
-            transition: var(--transition-fast);
+            right: -5%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            max-width: 700px;
         }
         
-        .nav-link:hover::after {
-            transform: scaleX(1);
+        .features {
+            padding: var(--space-2xl) 0;
         }
         
-        /* ADVANCED ANIMATIONS */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
         }
         
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .feature-card {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            transition: all 0.3s ease;
         }
         
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
         
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-500);
+            margin-bottom: var(--space-sm);
         }
         
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-sm);
         }
         
-        /* ADVANCED UTILITY CLASSES */
-        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        
-        .bg-gradient-primary {
-            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+        .testimonials {
+            background: var(--bg-secondary);
+            padding: var(--space-2xl) 0;
         }
         
-        .bg-gradient-radial {
-            background: radial-gradient(circle at center, var(--primary-100), transparent);
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-md);
         }
         
-        .text-gradient {
-            background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: var(--space-md);
         }
         
-        /* RESPONSIVE DESIGN */
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: var(--space-sm);
+        }
+        
+        .cta {
+            padding: var(--space-2xl) 0;
+            background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer {
+            background: var(--neutral-900);
+            color: var(--text-inverse);
+            padding: var(--space-xl) 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer h4 {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-link {
+            color: var(--neutral-400);
+            text-decoration: none;
+            margin-bottom: var(--space-xs);
+            display: block;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
         @media (max-width: 768px) {
-            :root {
-                --text-6xl: 3rem;
-                --text-5xl: 2.25rem;
-                --text-4xl: 1.875rem;
-                --space-24: 4rem;
-                --space-32: 6rem;
+            .hero {
+                padding: 80px 0;
             }
             
-            .container {
-                padding: 0 var(--space-4);
+            .hero h1 {
+                font-size: 2.5rem;
             }
             
-            .grid-cols-2,
-            .grid-cols-3,
-            .grid-cols-4,
-            .grid-cols-6 {
-                grid-template-columns: 1fr;
+            .hero-image {
+                display: none;
             }
             
             .nav-menu {
                 display: none;
             }
-            
-            .section {
-                padding: var(--space-16) 0;
-            }
-            
-            .section-hero {
-                min-height: 80vh;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            :root {
-                --text-6xl: 2.5rem;
-                --text-5xl: 2rem;
-                --container-padding: var(--space-4);
-            }
-        }
-        
-        /* ACCESSIBILITY IMPROVEMENTS */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* PRINT STYLES */
-        @media print {
-            .navbar,
-            .btn,
-            [data-aos] {
-                display: none !important;
-            }
-            
-            body {
-                font-size: 12pt;
-                line-height: 1.4;
-                color: black;
-                background: white;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Advanced Navigation with Glass Morphism -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="nav-logo">BuildCore CRM</a>
+            <a href="#" class="nav-logo">BuildFlow CRM</a>
             <ul class="nav-menu">
                 <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#resources" class="nav-link">Resources</a></li>
-                <li><a href="#company" class="nav-link">Company</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div>
-                <a href="#" class="btn btn-secondary">Sign In</a>
-                <a href="#" class="btn btn-primary">Get Started</a>
-            </div>
+            <a href="#" class="btn btn-primary">Get Started</a>
         </div>
     </nav>
 
-    <!-- Hero Section with Advanced Effects -->
-    <section class="section-hero" id="hero">
-        <div id="particles-js"></div>
+    <section class="hero">
         <div class="container">
-            <div class="grid grid-cols-2">
-                <div data-aos="fade-right">
-                    <h1 class="text-h1 mb-6">Revolutionize Your <span class="text-gradient">Construction Management</span></h1>
-                    <p class="text-xl mb-8">BuildCore CRM: The ultimate solution for <span id="typed-text"></span></p>
-                    <div class="flex gap-4">
-                        <a href="#" class="btn btn-primary btn-lg">Start Free Trial</a>
-                        <a href="#" class="btn btn-secondary btn-lg">Watch Demo</a>
-                    </div>
+            <div class="hero-content">
+                <h1 data-aos="fade-up">Streamline Your Construction Projects</h1>
+                <p data-aos="fade-up" data-aos-delay="100">BuildFlow CRM is the user-friendly solution designed specifically for construction professionals. Manage projects, contacts, and deals with ease.</p>
+                <a href="#" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Start Free Trial</a>
+                <a href="#" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="200">Watch Demo</a>
+            </div>
+            <img src="https://via.placeholder.com/600x400" alt="BuildFlow CRM Dashboard" class="hero-image" data-aos="fade-left">
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 data-aos="fade-up">Powerful Features for Construction Management</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">📸</div>
+                    <h3>OCR Contact Capture</h3>
+                    <p>Easily capture contact information from business cards or documents using our advanced OCR technology.</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="https://via.placeholder.com/600x400" alt="BuildCore CRM Dashboard" class="rounded-xl shadow-2xl">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🏗️</div>
+                    <h3>Project Timeline</h3>
+                    <p>Visualize your project timelines and track progress with our intuitive Gantt chart feature.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Analytics</h3>
+                    <p>Get insights into your projects and team performance with customizable dashboards and reports.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats/Metrics Bar -->
-    <section class="bg-gradient-primary text-white py-12">
+    <section class="testimonials" id="testimonials">
         <div class="container">
-            <div class="grid grid-cols-4 gap-8 text-center">
-                <div>
-                    <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="200">0</span>+</h3>
-                    <p>Construction Companies</p>
-                </div>
-                <div>
-                    <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="50">0</span>%</h3>
-                    <p>Faster Project Completion</p>
-                </div>
-                <div>
-                    <h3 class="text-4xl font-bold mb-2"><span class="counter" data-target="99">0</span>.9%</h3>
-                    <p>Uptime</p>
-                </div>
-                <div>
-                    <h3 class="text-4xl font-bold mb-2">$<span class="counter" data-target="10">0</span>M+</h3>
-                    <p>Revenue Generated</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Grid -->
-    <section id="features" class="section bg-secondary">
-        <div class="container">
-            <h2 class="text-h2 text-center mb-16">Powerful Features for Modern Construction</h2>
-            <div class="grid grid-cols-3 gap-8">
-                <div class="card card-feature" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/80" alt="Project Management" class="mb-6 mx-auto">
-                    <h3 class="text-xl font-semibold mb-4">Intelligent Project Management</h3>
-                    <p>Streamline your construction projects with AI-powered scheduling, resource allocation, and progress tracking.</p>
-                </div>
-                <div class="card card-feature" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://via.placeholder.com/80" alt="Document Management" class="mb-6 mx-auto">
-                    <h3 class="text-xl font-semibold mb-4">Smart Document Management</h3>
-                    <p>Centralize all your project documents, contracts, and blueprints with advanced search and version control.</p>
-                </div>
-                <div class="card card-feature" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/80" alt="Financial Tools" class="mb-6 mx-auto">
-                    <h3 class="text-xl font-semibold mb-4">Comprehensive Financial Tools</h3>
-                    <p>Manage budgets, invoices, and expenses with real-time financial reporting and forecasting.</p>
-                </div>
-                <div class="card card-feature" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/80" alt="Team Collaboration" class="mb-6 mx-auto">
-                    <h3 class="text-xl font-semibold mb-4">Seamless Team Collaboration</h3>
-                    <p>Foster communication and coordination among team members, subcontractors, and clients with integrated messaging and task assignment.</p>
-                </div>
-                <div class="card card-feature" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://via.placeholder.com/80" alt="Mobile Access" class="mb-6 mx-auto">
-                    <h3 class="text-xl font-semibold mb-4">On-Site Mobile Access</h3>
-                    <p>Access critical project information and update progress from anywhere with our powerful mobile app.</p>
-                </div>
-                <div class="card card-feature" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/80" alt="Compliance Management" class="mb-6 mx-auto">
-                    <h3 class="text-xl font-semibold mb-4">Automated Compliance Management</h3>
-                    <p>Stay on top of safety regulations and industry standards with built-in compliance checklists and reporting.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Process -->
-    <section id="how-it-works" class="section">
-        <div class="container">
-            <h2 class="text-h2 text-center mb-16">How BuildCore CRM Works</h2>
-            <div class="grid grid-cols-4 gap-8">
-                <div class="text-center" data-aos="fade-up">
-                    <div class="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                        <span class="text-3xl font-bold text-primary-600">1</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Project Setup</h3>
-                    <p>Easily create new projects, define goals, and set milestones.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                        <span class="text-3xl font-bold text-primary-600">2</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Team Onboarding</h3>
-                    <p>Invite team members, assign roles, and set permissions.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                        <span class="text-3xl font-bold text-primary-600">3</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Task Management</h3>
-                    <p>Create, assign, and track tasks with our intuitive interface.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                        <span class="text-3xl font-bold text-primary-600">4</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Real-time Monitoring</h3>
-                    <p>Track progress, generate reports, and make data-driven decisions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Carousel -->
-    <section id="testimonials" class="section bg-secondary">
-        <div class="container">
-            <h2 class="text-h2 text-center mb-16">What Our Customers Say</h2>
-            <div class="swiper testimonials-swiper">
+            <h2 data-aos="fade-up">What Our Customers Say</h2>
+            <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="card card-testimonial">
-                            <p class="mb-6">"BuildCore CRM has transformed our project management process. We've seen a 40% increase in on-time project completion since implementing the platform."</p>
-                            <div class="flex items-center">
-                                <img src="https://via.placeholder.com/60" alt="John Doe" class="rounded-full mr-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-content">"BuildFlow CRM has transformed how we manage our construction projects. It's user-friendly and powerful at the same time."</p>
+                            <div class="testimonial-author">
+                                <img src="https://via.placeholder.com/50" alt="John Doe" class="testimonial-avatar">
                                 <div>
-                                    <h4 class="font-semibold">John Doe</h4>
-                                    <p class="text-sm text-gray-600">Project Manager, ABC Construction</p>
+                                    <strong>John Doe</strong>
+                                    <p>Project Manager, ABC Construction</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card card-testimonial">
-                            <p class="mb-6">"The financial tools in BuildCore CRM have helped us reduce budget overruns by 25%. It's an indispensable part of our operations now."</p>
-                            <div class="flex items-center">
-                                <img src="https://via.placeholder.com/60" alt="Jane Smith" class="rounded-full mr-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-content">"The OCR feature saves us hours of manual data entry. BuildFlow CRM is a game-changer for our business."</p>
+                            <div class="testimonial-author">
+                                <img src="https://via.placeholder.com/50" alt="Jane Smith" class="testimonial-avatar">
                                 <div>
-                                    <h4 class="font-semibold">Jane Smith</h4>
-                                    <p class="text-sm text-gray-600">CFO, XYZ Builders</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card card-testimonial">
-                            <p class="mb-6">"The mobile app has been a game-changer for our on-site teams. We can update progress and resolve issues in real-time, improving our efficiency by 30%."</p>
-                            <div class="flex items-center">
-                                <img src="https://via.placeholder.com/60" alt="Mike Johnson" class="rounded-full mr-4">
-                                <div>
-                                    <h4 class="font-semibold">Mike Johnson</h4>
-                                    <p class="text-sm text-gray-600">Site Supervisor, 123 Constructors</p>
+                                    <strong>Jane Smith</strong>
+                                    <p>CEO, Smith Builders</p>
                                 </div>
                             </div>
                         </div>
@@ -702,18 +411,69 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="section">
+    <section class="cta">
         <div class="container">
-            <h2 class="text-h2 text-center mb-16">Simple, Transparent Pricing</h2>
-            <div class="grid grid-cols-3 gap-8">
-                <div class="card" data-aos="fade-up">
-                    <h3 class="text-2xl font-semibold mb-4">Starter</h3>
-                    <p class="text-4xl font-bold mb-6">$99<span class="text-base font-normal">/month</span></p>
-                    <ul class="mb-8">
-                        <li class="mb-2">✅ Up to 5 projects</li>
-                        <li class="mb-2">✅ Basic project management</li>
-                        <li class="mb-2">✅ 5GB document storage</li>
-                        <li class="mb-2">✅ Email support</li>
+            <h2 data-aos="fade-up">Ready to Streamline Your Construction Projects?</h2>
+            <a href="#" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="100">Start Your Free Trial</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">BuildFlow CRM</div>
+                    <p>Empowering construction professionals with user-friendly project management solutions.</p>
+                </div>
+                <div>
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Features</a></li>
+                        <li><a href="#" class="footer-link">Pricing</a></li>
+                        <li><a href="#" class="footer-link">Case Studies</a></li>
                     </ul>
-                    
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                        <li><a href="#" class="footer-link">Help Center</a></li>
+                        <li><a href="#" class="footer-link">API Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                }
+            }
+        });
+    </script>
+</body>
+</html>
