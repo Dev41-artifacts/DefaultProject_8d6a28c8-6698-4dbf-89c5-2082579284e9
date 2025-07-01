@@ -3,130 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revolutionizing CRM for the Construction Industry</title>
-    <meta name="description" content="Discover a user-friendly CRM designed for the construction industry, tailored to meet the needs of tech-savvy users and novices alike.">
+    <title>Revolutionary CRM for the Construction Industry</title>
+    <meta name="description" content="Discover a user-friendly CRM tailored for the construction industry, featuring OCR capabilities and industry-specific functionalities.">
     <style>
         :root {
             --primary-color: #4CAF50; /* Green */
             --secondary-color: #FFFFFF; /* White */
             --accent-color: #000000; /* Black */
-            --font-family: 'Arial', sans-serif;
-            --max-width: 1200px;
+            --body-font: 'Arial', sans-serif;
+            --heading-font: 'Helvetica', sans-serif;
         }
-        body {
-            font-family: var(--font-family);
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        body {
+            font-family: var(--body-font);
             line-height: 1.6;
             background-color: var(--secondary-color);
+            color: var(--accent-color);
         }
         .container {
-            max-width: var(--max-width);
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
         header {
             text-align: center;
-            padding: 50px 20px;
-            background: var(--primary-color);
-            color: var(--secondary-color);
+            padding: 50px 0;
         }
         h1 {
+            font-family: var(--heading-font);
             font-size: 2.5em;
-            margin: 0;
+            color: var(--primary-color);
         }
         h2 {
-            margin: 20px 0;
             font-size: 1.5em;
+            margin: 20px 0;
         }
-        .cta-button {
-            background: var(--accent-color);
+        p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .cta-primary {
+            display: inline-block;
+            background-color: var(--primary-color);
             color: var(--secondary-color);
             padding: 15px 30px;
+            margin: 20px 0;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: background 0.3s;
         }
-        .cta-button:hover {
-            background: #333333;
-        }
-        .social-proof {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .features, .use-cases {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin: 20px 0;
+        .cta-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary-color);
+            padding: 10px 25px;
+            margin: 10px 0;
+            text-decoration: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
         }
         .feature, .use-case {
-            background: #f4f4f4;
-            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
             padding: 20px;
-            flex: 1 0 30%;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+        .feature:hover, .use-case:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .testimonials {
+            margin: 50px 0;
+            text-align: center;
+        }
+        .testimonial {
+            margin: 10px 0;
+            font-style: italic;
         }
         footer {
             text-align: center;
             padding: 20px 0;
-            font-size: 0.9em;
-            color: #666;
+            border-top: 1px solid #ccc;
         }
         @media (max-width: 768px) {
-            .features, .use-cases {
-                flex-direction: column;
+            h1 {
+                font-size: 2em;
             }
-            .feature, .use-case {
-                flex: 1 0 100%;
+            h2 {
+                font-size: 1.25em;
+            }
+            .cta-primary, .cta-secondary {
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Transform Your Construction Projects with Our Innovative CRM</h1>
-        <h2>Simple, Powerful, Tailored for Industry Needs</h2>
-        <a href="#cta" class="cta-button">Get Started Free</a>
+        <div class="container">
+            <h1>Transform Your Construction Projects</h1>
+            <h2>User-Friendly CRM Designed for the Construction Industry</h2>
+            <a href="#get-started" class="cta-primary">Get Started Free</a>
+        </div>
     </header>
     <div class="container">
-        <div class="social-proof">
-            <h2>Trusted by Industry Leaders</h2>
-            <img src="logos-placeholder.png" alt="Client Logos" />
-        </div>
-        <div class="features">
+        <section>
+            <h2>Why Choose Our CRM?</h2>
             <div class="feature">
-                <h3>User-Friendly Interface</h3>
-                <p>Designed for novice tech users, our CRM simplifies management tasks with an intuitive layout.</p>
+                <h3>User-Friendly Design</h3>
+                <p>Perfect for those new to tech, our CRM simplifies project management with an intuitive interface.</p>
             </div>
             <div class="feature">
-                <h3>Optical Character Recognition</h3>
-                <p>Easily capture contacts and deals with our built-in OCR functionality, just click and identify!</p>
+                <h3>Advanced OCR Functionality</h3>
+                <p>Easily capture contacts and deals with our state-of-the-art Optical Character Recognition technology.</p>
             </div>
             <div class="feature">
-                <h3>Customized for Construction</h3>
-                <p>Features tailored to meet the specific needs of the construction industry, enhancing productivity.</p>
+                <h3>Industry-Specific Features</h3>
+                <p>Tailored functionalities meet the unique needs of construction professionals.</p>
             </div>
-        </div>
-        <div class="use-cases">
+        </section>
+        <section>
+            <h2>Use Cases</h2>
             <div class="use-case">
-                <h3>Project Management</h3>
-                <p>Streamline project timelines and resources effectively with our CRM's advanced tools.</p>
-            </div>
-            <div class="use-case">
-                <h3>Client Relations</h3>
-                <p>Build strong client relationships through efficient communication and tracking systems.</p>
+                <h3>Streamline Your Projects</h3>
+                <p>Manage timelines, budgets, and resources more efficiently, minimizing delays and maximizing productivity.</p>
             </div>
             <div class="use-case">
-                <h3>Data Insights</h3>
-                <p>Gain actionable insights through analytics that help drive construction decisions.</p>
+                <h3>Improve Client Engagement</h3>
+                <p>Enhance communication and relationship management with easy-to-use tools at your fingertips.</p>
             </div>
-        </div>
+        </section>
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"This CRM has transformed the way we manage projects. It's user-friendly and efficient!" - Alex R., Construction Manager</p>
+            </div>
+            <div class="testimonial">
+                <p>"The OCR feature is a game changer for me. I can capture information instantly!" - Jamie T., Project Coordinator</p>
+            </div>
+        </section>
         <footer>
             <p>&copy; 2025 Construction CRM. All rights reserved.</p>
-            <a href="#contact" class="cta-button">Learn More</a>
+            <a href="#learn-more" class="cta-secondary">Learn More</a>
         </footer>
     </div>
 </body>
