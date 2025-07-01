@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildFlow CRM - Revolutionary Construction Management Solution</title>
-    <meta name="description" content="BuildFlow CRM: Streamline your construction projects with our user-friendly, tech-savvy CRM tailored for the modern construction industry. Boost efficiency and grow your business.">
+    <title>Construction CRM - Revolutionizing Project Management</title>
+    <meta name="description" content="A user-friendly CRM tailored for the construction industry, featuring OCR functionality and a clean design.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,291 +12,162 @@
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    
+
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        
-        :root {
-            --primary-50: #e6f7ed;
-            --primary-100: #c3ebd3;
-            --primary-200: #9cdfb6;
-            --primary-300: #74d398;
-            --primary-400: #4dc77b;
-            --primary-500: #10b981;
-            --primary-600: #0ea271;
-            --primary-700: #0c8b61;
-            --primary-800: #0a7451;
-            --primary-900: #085d41;
-            
-            --neutral-50: #f9fafb;
-            --neutral-100: #f3f4f6;
-            --neutral-200: #e5e7eb;
-            --neutral-300: #d1d5db;
-            --neutral-400: #9ca3af;
-            --neutral-500: #6b7280;
-            --neutral-600: #4b5563;
-            --neutral-700: #374151;
-            --neutral-800: #1f2937;
-            --neutral-900: #111827;
-            
-            --success: #10b981;
-            --warning: #f59e0b;
-            --error: #ef4444;
-            --info: #3b82f6;
-            
-            --text-primary: var(--neutral-900);
-            --text-secondary: var(--neutral-600);
-            --text-tertiary: var(--neutral-500);
-            --text-inverse: #ffffff;
-            
-            --bg-primary: #ffffff;
-            --bg-secondary: var(--neutral-50);
-            --bg-tertiary: var(--neutral-100);
-            
-            --container-max: 1200px;
-            --container-padding: 2rem;
-            
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            
-            --border-radius: 0.375rem;
-        }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.5;
-            color: var(--text-primary);
-            background-color: var(--bg-primary);
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #343a40;
+            overflow-x: hidden;
         }
-        
+
+        :root {
+            --primary: #10b981;
+            --secondary: #ffffff;
+            --accent: #000000;
+            --text-primary: #343a40;
+            --text-secondary: #6c757d;
+            --bg-light: #f8f9fa;
+        }
+
         .container {
-            max-width: var(--container-max);
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--container-padding);
+            padding: 0 2rem;
         }
-        
+
+        .section {
+            padding: 4rem 0;
+            position: relative;
+        }
+
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000;
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--neutral-200);
+            border-bottom: 1px solid #dee2e6;
+            z-index: 1000;
         }
-        
+
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            padding: 1rem 0;
         }
-        
+
         .nav-logo {
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-600);
+            font-weight: bold;
+            color: var(--primary);
             text-decoration: none;
         }
-        
+
         .nav-menu {
             display: flex;
+            align-items: center;
             gap: 2rem;
         }
-        
+
         .nav-link {
             color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
-        
+
         .nav-link:hover {
-            color: var(--primary-600);
+            color: var(--primary);
         }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-600);
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: url('https://source.unsplash.com/1600x900/?construction') no-repeat center center/cover;
             color: white;
         }
-        
-        .btn-primary:hover {
-            background-color: var(--primary-700);
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
-        
-        .hero {
-            padding: 120px 0;
-            background: linear-gradient(135deg, var(--primary-50), var(--neutral-50));
-        }
-        
-        .hero-content {
-            max-width: 600px;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: var(--primary-900);
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
+
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
             margin-bottom: 2rem;
         }
-        
-        .features {
-            padding: 100px 0;
-            background-color: var(--bg-secondary);
+
+        .btn {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--primary-900);
+
+        .btn:hover {
+            background-color: darken(var(--primary), 10%);
         }
-        
+
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
+            margin-top: 2rem;
         }
-        
+
         .feature-card {
-            background-color: white;
-            border-radius: var(--border-radius);
+            background: var(--bg-light);
             padding: 2rem;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+
+        .testimonial-carousel {
+            margin-top: 4rem;
         }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-600);
-            margin-bottom: 1rem;
-        }
-        
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .feature-description {
-            color: var(--text-secondary);
-        }
-        
-        .cta {
-            padding: 100px 0;
-            background-color: var(--primary-900);
-            color: white;
+
+        .testimonial-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        
-        .cta-title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-        }
-        
-        .btn-cta {
-            background-color: white;
-            color: var(--primary-900);
-            font-size: 1.125rem;
-            padding: 1rem 2rem;
-        }
-        
-        .btn-cta:hover {
-            background-color: var(--neutral-100);
-        }
-        
+
         .footer {
-            background-color: var(--neutral-900);
-            color: var(--neutral-300);
-            padding: 4rem 0;
+            background: #343a40;
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
         }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-        
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links h4 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-links a {
-            color: var(--neutral-400);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
+
         @media (max-width: 768px) {
-            .hero-title {
+            .hero h1 {
                 font-size: 2.5rem;
             }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .cta-title {
-                font-size: 2.5rem;
+            .hero h2 {
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -304,135 +175,96 @@
 <body>
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="nav-logo">BuildFlow CRM</a>
-            <div class="nav-menu">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <a href="#" class="btn btn-primary">Get Started</a>
+            <a href="#" class="nav-logo">Construction CRM</a>
+            <ul class="nav-menu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Revolutionize Your Construction Management</h1>
-                <p class="hero-subtitle">BuildFlow CRM is the user-friendly solution designed specifically for the construction industry. Streamline your projects, boost efficiency, and grow your business.</p>
-                <a href="#" class="btn btn-primary">Start Free Trial</a>
-            </div>
+            <h1>Welcome to Construction CRM</h1>
+            <h2>Your user-friendly solution for construction management.</h2>
+            <button class="btn">Get Started</button>
         </div>
     </section>
 
-    <section id="features" class="features">
+    <section class="section" id="features">
         <div class="container">
-            <h2 class="section-title">Powerful Features for Construction Pros</h2>
+            <h3>Key Features</h3>
             <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up">
-                    <div class="feature-icon">📸</div>
-                    <h3 class="feature-title">Smart OCR Technology</h3>
-                    <p class="feature-description">Easily capture and identify contacts and deals by simply taking a picture. Our advanced OCR functionality does the work for you.</p>
+                <div class="feature-card">
+                    <h4>User-Friendly Design</h4>
+                    <p>Designed specifically for individuals unfamiliar with complex tools.</p>
                 </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon">🏗️</div>
-                    <h3 class="feature-title">Industry-Specific Tools</h3>
-                    <p class="feature-description">Tailored functionalities designed to meet the unique needs of construction professionals. Manage projects, teams, and clients effortlessly.</p>
+                <div class="feature-card">
+                    <h4>OCR Functionality</h4>
+                    <p>Allows users to click pictures and identify contacts and deals.</p>
                 </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon">🤝</div>
-                    <h3 class="feature-title">Client Management</h3>
-                    <p class="feature-description">Keep all your client interactions organized in one place. Track communications, manage expectations, and deliver exceptional service.</p>
+                <div class="feature-card">
+                    <h4>Industry-Specific Features</h4>
+                    <p>Tailored functionalities catering specifically to the construction industry needs.</p>
                 </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Real-time Analytics</h3>
-                    <p class="feature-description">Gain valuable insights into your business performance with easy-to-understand dashboards and reports tailored for construction.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-icon">📱</div>
-                    <h3 class="feature-title">Mobile Friendly</h3>
-                    <p class="feature-description">Access your CRM on the go. Our mobile-responsive design ensures you can manage your business from any device, anywhere.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Secure & Compliant</h3>
-                    <p class="feature-description">Rest easy knowing your data is protected. We adhere to the highest security standards and industry-specific compliance requirements.</p>
+                <div class="feature-card">
+                    <h4>Clean Design</h4>
+                    <p>Featuring a color palette of green, white, and black for an approachable look.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
+    <section class="section testimonial-carousel" id="testimonials">
         <div class="container">
-            <h2 class="cta-title">Ready to Transform Your Construction Business?</h2>
-            <p class="cta-subtitle">Join thousands of construction professionals who are already using BuildFlow CRM to streamline their operations and boost productivity.</p>
-            <a href="#" class="btn btn-cta">Get Started Now</a>
+            <h3>What Our Users Say</h3>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <p>"The Construction CRM has transformed our project management!"</p>
+                            <h5>- John Doe, Construction Manager</h5>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <p>"A user-friendly interface that even our novice tech users find easy!"</p>
+                            <h5>- Jane Smith, Project Engineer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="footer-logo">BuildFlow CRM</div>
-                    <p>Empowering the construction industry with smart, user-friendly technology solutions.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">API Docs</a></li>
-                    </ul>
-                </div>
-            </div>
+            <p>&copy; 2025 Construction CRM. All Rights Reserved.</p>
+            <p>Contact Us: info@constructioncrm.com</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/lib/typed.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Swiper
+            const swiper = new Swiper('.swiper-container', {
+                autoplay: {
+                    delay: 2500,
+                },
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                }
+            });
 
-        gsap.from('.hero-content', {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            ease: 'power3.out'
-        });
-
-        new Typed('.hero-title', {
-            strings: ['Revolutionize Your Construction Management', 'Streamline Your Projects', 'Boost Your Efficiency'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            startDelay: 1000,
-            loop: true
+            // Initialize AOS
+            AOS.init();
         });
     </script>
 </body>
