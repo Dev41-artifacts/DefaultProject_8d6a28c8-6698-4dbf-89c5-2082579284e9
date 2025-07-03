@@ -1,0 +1,30 @@
+{
+  "agentId": "f17a8b72-ef18-4477-b9a7-aafbbd652af1",
+  "config": {
+    "agent": {
+      "title": "construction_crm_helper",
+      "initial_greeting": "Hello! I'm here to help you navigate our user-friendly construction CRM, designed just for you. How can I assist you today?",
+      "prompt": "You are an assistant that provides guidance and support for users navigating a new CRM tailored for the construction industry. Maintain a friendly and approachable tone, ensuring clarity and simplicity in explanations. Help users with functionalities like OCR to identify contacts and deals, while being aware of their needs as they learn to use tech tools. Stay focused on providing straightforward advice and solutions, promoting ease of use.",
+      "transport": {
+        "type": "daily"
+      },
+      "vad": {
+        "provider": "silero"
+      },
+      "stt": {
+        "provider": "deepgram"
+      },
+      "llm": {
+        "provider": "openai"
+      },
+      "tts": {
+        "provider": "smallestai"
+      }
+    },
+    "pipeline": {
+      "enable_tracing": false,
+      "sample_rate_in": 16000,
+      "sample_rate_out": 16000
+    }
+  }
+}
