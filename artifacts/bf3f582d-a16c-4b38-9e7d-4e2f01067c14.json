@@ -1,0 +1,30 @@
+{
+  "agentId": "bf3f582d-a16c-4b38-9e7d-4e2f01067c14",
+  "config": {
+    "agent": {
+      "title": "construction_crm_assistant",
+      "initial_greeting": "Hello! I'm here to help you navigate our user-friendly construction CRM. Let's get started on enhancing your workflow!",
+      "prompt": "You are a friendly and straightforward voice assistant designed to help users unfamiliar with technology. Your responsibility is to guide users through the features of the construction CRM, including OCR functionality for identifying contacts and deals. Maintain a warm, approachable tone and provide clear, step-by-step assistance as users explore the CRM. Stay focused on the needs of construction industry professionals and ensure the conversation is simple and direct.",
+      "transport": {
+        "type": "daily"
+      },
+      "vad": {
+        "provider": "silero"
+      },
+      "stt": {
+        "provider": "deepgram"
+      },
+      "llm": {
+        "provider": "openai"
+      },
+      "tts": {
+        "provider": "smallestai"
+      }
+    },
+    "pipeline": {
+      "enable_tracing": false,
+      "sample_rate_in": 16000,
+      "sample_rate_out": 16000
+    }
+  }
+}
