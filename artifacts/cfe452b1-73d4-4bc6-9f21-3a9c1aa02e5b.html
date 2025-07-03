@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Project Aura - Intelligent Voice Solutions</title>
+    <title id="page-title">Friendly CRM for Construction - Streamline Your Projects</title>
     
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,17 +17,17 @@
         /* CSS variables for dynamic theming */
         :root {
             --bg-color: #FFFFFF;
-            --text-color: #000000;
+            --text-color: #1F2937;
             --text-muted-color: #4B5563;
             --border-color: #E5E7EB;
-            --card-bg-color: #FFFFFF;
+            --card-bg-color: #F9FAFB;
             --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
             --iframe-border-color: #D1D5DB;
             --iframe-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            --gradient-from: #67C179; 
-            --gradient-to: #BBE4B9; 
-            --button-bg-color: #34D399; 
-            --button-hover-bg-color: #059669; 
+            --gradient-from: #34D399;
+            --gradient-to: #6EE7B7;
+            --button-bg-color: #34D399;
+            --button-hover-bg-color: #059669;
         }
 
         body {
@@ -124,15 +124,15 @@
     // --- CONFIGURATION JSON ---
     // Modify this object to change the content and appearance of the page.
     const config = {
-        pageTitle: "Project Aura - CRM for Construction Industry",
+        pageTitle: "Friendly CRM for Construction - Streamline Your Projects",
         theme: {
             mode: 'light', // 'light' or 'dark'
             light: {
                 bgColor: '#FFFFFF',
-                textColor: '#000000',
+                textColor: '#1F2937',
                 textMutedColor: '#4B5563',
                 borderColor: '#E5E7EB',
-                cardBgColor: '#FFFFFF',
+                cardBgColor: '#F9FAFB',
                 cardShadow: '0 10px 20px rgba(0, 0, 0, 0.05)',
                 iframeBorderColor: '#D1D5DB',
                 iframeShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
@@ -148,8 +148,8 @@
                 iframeShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
             },
             gradient: {
-                from: '#67C179',
-                to: '#BBE4B9'
+                from: '#34D399',
+                to: '#6EE7B7'
             },
             button: {
                 bgColor: '#34D399',
@@ -157,8 +157,8 @@
             }
         },
         header: {
-            title_prefix: "Project",
-            title_highlight: "Aura",
+            title_prefix: "User-Friendly",
+            title_highlight: "CRM for Construction",
             navLinks: [
                 { text: "About", href: "#" },
                 { text: "Features", href: "#" },
@@ -167,37 +167,37 @@
             buttonText: "Get Started"
         },
         main: {
-            headline_prefix: "Revolutionizing Construction with",
-            headline_highlight: "Intelligent CRM.",
-            description: "Introducing our new CRM specifically designed for the construction industry, aiming to streamline operations for both tech-savvy professionals and new users alike. Experience a user-friendly interface and powerful capabilities tailored for the unique needs of construction projects.",
+            headline_prefix: "Simple. Intuitive. Effective.",
+            headline_highlight: "Your CRM Solution.",
+            description: "Our CRM is designed for construction industry professionals, offering a user-friendly solution to manage contacts and deals effortlessly. Whether you're new to tech or seeking to streamline your operations, we've got you covered.",
             features: [
                 {
-                    icon: '<svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354l-8.606 8.606a4.993 4.993 0 000 7.071l1.415 1.415a4.993 4.993 0 007.071 0l8.606-8.606a4.993 4.993 0 000-7.071L15.35 4.354a4.993 4.993 0 00-7.071 0z"></path></svg>',
+                    icon: '<svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 13l2 2h6l-2-2 2-2h-6l-2 2z"></path></svg>',
                     iconBg: 'bg-green-100',
-                    title: "User-Friendly Interface",
-                    description: "Designed for ease of use, perfect for users new to technology."
+                    title: "Photo Recognition",
+                    description: "Click and capture photos to identify contacts and deals via OCR functionality."
                 },
                 {
-                    icon: '<svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h2m6 0h8m-8 0H5m4-6h6m-6 0V7m0 4h8m-8 0v4"></path></svg>',
-                    iconBg: 'bg-green-100',
-                    title: "OCR Functionality",
-                    description: "Capture images to identify contacts and manage deals efficiently."
+                    icon: '<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18m-7 5h7"></path></svg>',
+                    iconBg: 'bg-green-200',
+                    title: "Targeted Features",
+                    description: "Tailored functionalities specifically for the construction industry."
                 },
                 {
-                    icon: '<svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h8m-4 4l4-4-4-4z"></path></svg>',
-                    iconBg: 'bg-green-100',
-                    title: "Construction Industry Focus",
-                    description: "Tailored features to meet the specific needs of construction industry users."
+                    icon: '<svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8Alslilij64-8 0 1 1 1 2z"></path></svg>',
+                    iconBg: 'bg-green-300',
+                    title: "Easy to Use",
+                    description: "Friendly design for all users, ensuring a straightforward learning curve."
                 }
             ]
         },
         iframe: {
-            title: "Interactive CRM Demo",
-            subtitle: "Explore the functionalities offered by our CRM.",
-            src: "https://alpha2.dev41.com/chat/8e28d65a-0565-4aea-8ad4-6a2b14145262"
+            title: "Welcome to Your CRM",
+            subtitle: "Try our interactive demo and explore capabilities.",
+            src: "https://alpha2.dev41.com/chat/dc886303-1533-483b-bc73-183410938d26"
         },
         footer: {
-            text: "&copy; 2025 Project Aura. All Rights Reserved."
+            text: "&copy; 2025 Friendly CRM for Construction. All Rights Reserved."
         }
     };
 
